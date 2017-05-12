@@ -97,13 +97,13 @@ Dokaz, da obstaja npr. {\em sorazmeren protokol}, je sestavljen iz pravil, strat
 
 Pri načinu zapisovanja protokolov bomo zaradi preglednosti prevzeli način, uporabljen v članku (Sklic Sklic Sklic Sklic Sklic Sklic). To pomeni, da bomo protokole predstavili kot zaporedje oštevilčenih korakov. Dokaz, da protokol res pripelje do pravične razdelitve, bomo zapisovali ``sproti'', torej med posamezniki koraki. Strategije bomo ločili od pravil tako, da jih bomo zapisali v oklepajih in v sivi barvi. S tem želimo doseči jasen zapis in omogočiti branje navodil ločeno od strategij.
 
-V nadaljevanju so podrobno predstavljeni štirje protokoli, dva za sorazmerno delitev (za primer treh igralcev in v splošnem) in dva za delitev brez zavisti (ponovno najprej za primer treh igralcev in nato splošna rešitev).
+V nadaljevanju so podrobno predstavljeni štirje protokoli, dva za {\em sorazmerno delitev} (za primer treh igralcev in v splošnem) in dva za {\em delitev brez zavisti} (ponovno najprej za primer treh igralcev in nato splošna rešitev).
 
 % Ali sledi tudi dokaz, da obstaja delitev super brez zavisti ?  ?  ?  ?  ?  ?
 
 \section{Sorazmerna delitev torte med tri igralce}
 
-Naslednji protokol vodi do take razdelitve torte med tri ljudi, da vsak izmed njih svoj kos vrednoti kot vsaj eno tretjino celotne torte, torej je delitev sorazmerna.
+Naslednji protokol vodi do take razdelitve torte med tri ljudi, da vsak izmed njih svoj kos vrednoti kot vsaj eno tretjino celotne torte, torej je  {\em delitev sorazmerna}.
 
 
 \begin{protokol}
@@ -118,7 +118,7 @@ ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak 
 
 \textsl{Vrstni red izbiranja: Tretji igralec, drugi igralec, prvi igralec.}
 
-\item [\em Komentar] V tem primeru je vsakdo dobil kos v velikosti vsaj  $1/3$ celote (v njegovem načinu vrednotenja). Tretji igralec izbira prvi, zato bo gotovo lahko izbral tak kos. Drugi igralec je vsaj dva kosa vrednotil kot večja od  $1/3$, torej je vsaj eden od teh kosov še na voljo po tem, ko tretji vzame svoj kos. Prvi igralec je torto razdelil na enake dele, torej bo v vsakem primeru zadovoljen s kosom, ki mu še ostane.
+\item [\textsf{\em Komentar}] V tem primeru je vsakdo dobil kos v velikosti vsaj  $1/3$ celote (v njegovem načinu vrednotenja). Tretji igralec izbira prvi, zato bo gotovo lahko izbral tak kos. Drugi igralec je vsaj dva kosa vrednotil kot večja od  $1/3$, torej je vsaj eden od teh kosov še na voljo po tem, ko tretji vzame svoj kos. Prvi igralec je torto razdelil na enake dele, torej bo v vsakem primeru zadovoljen s kosom, ki mu še ostane.
 
 \item Sicer (če je v 2. koraku drugi igralec dva kosa označil kot ``slaba'') ponovimo drugi korak, le da je zdaj na potezi tretji igralec. Oznake drugega igralca prekrijemo, tretji igralec jih ne upošteva.
 
@@ -126,15 +126,15 @@ ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak 
 
 \textsl{Vrstni red izbiranja: Drugi igralec, tretji igralec, prvi igralec.}
 
-\item [\em Komentar] Razmislek je podoben prejšnjemu. Drugi igralec lahko izbere kos, ki ga ni označil kot ``slabega'', saj izbira prvi. Tako nujno dobi vsaj $1/3$ celote. Tretjemu igralcu sta se zdela vsaj dva kosa enako velika (in oba večja od $1/3$) in vsaj en tak kos mu je še vedno na voljo. Prvi igralec je zadovoljen s preostalim kosom, saj je zanj vreden natačno $1/3$.
+\item [\textsf{\em Komentar}] Razmislek je podoben prejšnjemu. Drugi igralec lahko izbere kos, ki ga ni označil kot ``slabega'', saj izbira prvi. Tako nujno dobi vsaj $1/3$ celote. Tretjemu igralcu sta se zdela vsaj dva kosa enako velika (in oba večja od $1/3$) in vsaj en tak kos mu je še vedno na voljo. Prvi igralec je zadovoljen s preostalim kosom, saj je zanj vreden natačno $1/3$.
 
 \item Če je tretji igralec v četrtem koraku dva kosa označil kot ``slaba'', mora prvi igralec vzeti kos, ki sta ga tako drugi kot tretji igralec določila za ``slabega''.
 
-\item [\em Komentar] Tak kos gotovo obstaja. Prepričamo se lahko na konkretnem primeru ali pa upoštevamo Dirichletovo načelo - če imamo tri kose in štiri oznake ``slabo'', potem je vsaj en kos moral dobiti dve taki oznaki. S tem je prvi igralec dobil natanko $1/3$ torte, preostala igralca pa mislita, da je dobil strogo manj kot $1/3$. Po njunem vretnotenju je preostanek torte skupaj vreden več kot $2/3$ celote.
+\item [\textsf{\em Komentar}]Tak kos gotovo obstaja. Prepričamo se lahko na konkretnem primeru ali pa upoštevamo Dirichletovo načelo - če imamo tri kose in štiri oznake ``slabo'', potem je vsaj en kos moral dobiti dve taki oznaki. S tem je prvi igralec dobil natanko $1/3$ torte, preostala igralca pa mislita, da je dobil strogo manj kot $1/3$. Po njunem vretnotenju je preostanek torte skupaj vreden več kot $2/3$ celote.
 
 \item Preostala kosa torte ponovno združimo. To novo torto si drugi in tretji igralec razdelita po metodi ``Reži in izberi''.
 
-\item [\em Komentar] Ker smo v prejšnjem komentarju pokazali, da si bosta razdelila več kot $2/3$ celote, z upoštevanjem uvodoma omenjenaga dejstva, da metoda ``Reži in izberi'' pripelje do sorazmerne delitve, lahko sklepamo, da je končna razdelitev res sorazmerna.
+\item [\textsf{\em Komentar}] Ker smo v prejšnjem komentarju pokazali, da si bosta razdelila več kot $2/3$ celote, z upoštevanjem uvodoma omenjenaga dejstva, da metoda ``Reži in izberi'' pripelje do sorazmerne delitve, lahko sklepamo, da je končna razdelitev res  {\em sorazmerna}.
 
 \end{protokol}
 
@@ -158,45 +158,73 @@ Kos preimenujemo v $P_2$ (neodvisno od tega, ali je bil obrezan). Tisto, kar je 
 
 \item Za igralce od tretjega do zadnjega po vrsti naredimo naslednje: Igralec $i$ vzame kos $P_{i-1}$ od svojega predhodnika in ravna enako kot drugi igralec v prejšnjem koraku (torej kos obreže ali pa ne). Kos preimenujemo v $P_i$ in podamo naprej, morebitne ostanke pa shranjujemo na enem mestu.
 
-\item [\em Komentar] Sedaj vsak igralec $i$ misli, da je kos $P_i$ velikosti $1/n$ ali manjši. Prav tako velja, da je kos $P_i$ vedno večji ali enak $P_{i+1}$, zato vsi mislijo, da je kos $P_n$ vreden kvečjemu $1/n$.
+\item [\textsf{\em Komentar}] Sedaj vsak igralec $i$ misli, da je kos $P_i$ velikosti $1/n$ ali manjši. Prav tako velja, da je kos $P_i$ vedno večji ali enak $P_{i+1}$, zato vsi mislijo, da je kos $P_n$ vreden kvečjemu $1/n$.
 
 \item Kos $P_n$ dobi zadnji igralec, ki je obrezal kos, ali pa prvi igralec, če ga ni nihče obrezal.
 
-\item [\em Komentar] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga sam naredil tako velikega. % Je to razumljivo?
+\item [\textsf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga sam naredil tako velikega. % Je to razumljivo?
 
 \item Vse obrezane koščke združimo z ostankom torte (iz prvega koraka), tako da dobimo novo torto, ki jo želimo sorazmerno razdeliti med $n - 1$ ljudi. Ponavljamo enak postopek, dokler nam ne ostaneta samo dva igralca.
 
-\item [\em Komentar] Kdor dobi kos v drugem krogu razdeljevanja, dobi natančno $1/(n - 1)$ nove torte. On in vse drugi se strinjajo, da je ta nova torta velika vsaj $(n - 1)/n$, torej je ta igralec dobil vsaj $1/n$ začetne torte.
+\item [\textsf{\em Komentar}] Kdor dobi kos v drugem krogu razdeljevanja, dobi natančno $1/(n - 1)$ nove torte. On in vse drugi se strinjajo, da je ta nova torta velika vsaj $(n - 1)/n$, torej je ta igralec dobil vsaj $1/n$ začetne torte.
 
 \item Za zadnja igralca sledimo metodi ``Reži in izberi''.
 
-\item [\em Komentar] Kot prej - vsakdo vrednoti svoj kos vsaj kot $1/n$ celote.
+\item [\textsf{\em Komentar}] Kot prej - vsakdo vrednoti svoj kos vsaj kot $1/n$ celote.
 
 \end{protokol}
 
 \section{Delitev brez zavisti med tri igralce}
 
-Pri delitvi brez zavisti želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo.
+Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo. V spodnjem protokolu je poleg obrezovanja pomemben tudi pojem ``nepreklicne prednosti'' enega igralca pred drugim in zamisel o postopni delitvi. Našteti trije elementi protokola so med seboj tesno povezani. Preprosto rečeno, z obrezovanjem pridemo do tega, da del torte razdelimo {\em brez zavisti}, del pa ostane nerazdeljen (ta del setavljajo koščki, ki so nastali zaradi obrezovanja večjih kosov). Da lahko razdelimo še ta preostanek, potrebujemo ``nepreklicno prednost'' enega igralca pred drugim. Podrobneje bomo to idejo razložili spodaj v kometnarjih ob konkretnem primeru.
 
-Delno razdeljevanje
+D
+
+Nepreklicna prednost
+
+\begin{protokol}
+
+\item Prvi igralec razdeli torto na tri dele \textcolor{gray}{(ki so zanj enako veliki)}.
+
+\item Drugi igralec lahko ne naredi ničesar \textcolor{gray}{(če vsaj dva od treh kosov enako velika in največja)}
+
+ali pa obreže enega od kosov. \textcolor{gray}{(Obreže največjega, in sicer tako, da bo po obrezovanju enako velik kot drugi največji. Tako dobimo dva enako velika največja kosa.)}
+
+Če je obrezal kos, odrezani del shranimo na mesto za ostanke in imenujemo $O$ (kot ostanek).
+
+\item Igralci si izberejo kose torte, ostankov ne upoštevamo. \textcolor{gray}{(Vsak izbere največji kos ali enega od enako velikih največjih kosov.)}
+
+\textsl{Vrstni red izbiranja: Tretji igralec, drugi igralec, prvi igralec.}
+
+Če je drugi igralec obrezal kos, ga je dolžan izbrati (če ga ni pred njim izbral tretji igralec).
+
+\item [\textsf{\em Komentar}] Tako smo {\em brez zavisti} razdelili del torte in dobili delitev ${\{X_1, X_2, X_3, O\}}$. Oglejmo si, zakaj nihče izmed igralcev ni zavisten drugemu. Tretji igralec izbira prvi, zato seveda lahko izbere ustrezen kos. Drugi igralec je poskrbel, da bosta vsaj dva kosa enako velika in največja, zato mu je vsaj en tak gotovo še na voljo. Prvi igralec je torto razrezal, obrezani kos pa je nujno izbral eden od prejšnjih igralcev, ker tako zahtevajo pravila. Zato je tudi on zadovoljen s kosom, ki mu ostane.
+
+\item Če drugi igralec ni obrezal kosa, smo končali, saj ni ostanka in smo že dosegli {\em delitev brez zavisti}. V nasprotnem primeru pa sta si drugi in tretji igralec razdelila en obrezan in en neobrezan kos. Tistega, ki je dobil neobrezan kos, imenujmo ``rezalec'', drugega pa ``ne-rezalec''. ``Rezalec'' sedaj razdeli $O$ na tri dele.
+
+\item [\textsf{\em Komentar}] Rekli bomo, da ima prvi igralec ``nepreklicno prednost'' pred ne-rezalcem', saj je slednji v delni razdelitvi dobil obrezan kos, ki je za prvega gotovo manjši od $1/3$. Zato prvi igralec ne-rezalcu ne bo zavidal ne glede na to, kako bo $O$ razdeljen mednje.
+
+\item Igralci si izberejo kose, na katere je bil razdeljen ostanek. \textcolor{gray}{(Vsak izbere največji kos ali enega od enako velikih največjih kosov.)}
+
+\textsl{Vrstni red izbiranja: Ne-rezalec, prvi igralec, rezalec.}
+
+\item [\textsf{\em Komentar}] Razdelili smo celotno torto.Vemo že, da je delitev ${\{X_1, X_2, X_3\}}$ {\em brez zavisti}, zato razmislimo le o delitvi ostanka. Ne-rezalec ne zavida nikomur, saj izbira prvi. Prvi igralec ne zavida ne-rezalcu zaradi ``nepreklicne prednosti'', kar smo utemeljili v prejšnjem komentarju, prav tako pa ne zavida rezalcu, saj ta izbira zadnji. Rezalec ne zavida nikomur, saj je sam razdelil $O$ na (zanj) enake kose. Da dobimo iskano delitev ${\{P_1, P_2, P_3\}}$, preprosto za vsakega od igralcev združimo kosa $X_i$ in $O_i$, kjer so $O_i$ kosi, na katere smo razdelili ostanek $O$.
+
+\end{protokol}
+
+\section{Delitev brez zavisti med $n$ igralcev}
+
+Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo. V spodnjem protokolu je poleg obrezovanja pomemben tudi pojem ``nepreklicne prednosti'' enega igralca pred drugim in zamisel o postopni delitvi. Našteti trije elementi protokola so med seboj tesno povezani. Preprosto rečeno, z obrezovanjem pridemo do tega, da del torte razdelimo {\em brez zavisti}, del pa ostane nerazdeljen (ta del setavljajo koščki, ki so nastali zaradi obrezovanja večjih kosov). Da lahko razdelimo še ta preostanek, potrebujemo ``nepreklicno prednost'' enega igralca pred drugim. Podrobneje bomo to idejo razložili spodaj v kometnarjih ob konkretnem primeru.
+
+D
 
 Nepreklicna prednost
 
 \begin{protokol}
 
 \item Prvi igralec
-
-\item
-
-\item
-
-\item
-
-\item
-
-\end{protokol}
-
-
+ 
+ \end{protokol}
 
 Vrednosti multiplikativne funkcije $f$  so določene že z vrednostmi pri
 potencah praštevil. Če namreč razcepimo 
