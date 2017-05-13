@@ -15,6 +15,7 @@
 \def\Q{\mathbb{Q}} % mnozica racionalnih stevil
 \def\R{\mathbb{R}} % mnozica realnih stevil
 \def\C{\mathbb{C}} % mnozica kompleksnih stevil
+\def\P{\mathbb{P}}
 \newcommand{\geslo}[2]{\noindent\textbf{#1} \quad \hangindent=1cm #2\\[-1pc]}
 
 \def\qed{$\hfill\Box$}   % konec dokaza
@@ -28,7 +29,7 @@
 \newtheorem{zgled}{Zgled}
 
 \newlist{protokol}{enumerate}{1}
-\setlist[protokol, 1]{label =  \texttt{\textsf{ Korak \arabic*}}}
+\setlist[protokol, 1]{label =  \textbf{ Korak \arabic*}}
 \setlist[protokol]{noitemsep}
 
 \title{Delitev brez zavisti \\ 
@@ -36,7 +37,7 @@
 \author{Tjaša Bajc \\
 Fakulteta za matematiko in fiziko \\
 Oddelek za matematiko}
-\date{24.\ februar 2017}
+\date{13.\ maj 2017}
 
 \begin{document}
 
@@ -79,13 +80,13 @@ Za problem s samo dvema igralcema je zelo znana t.i. metoda ``Reži in izberi'',
 
 Omenjeni primer $n = 2$ je edini, kjer pojma {\em proporcionalne delitve\/} in {\em delitve brez zavisti\/} sovpadata. Očitno je, da je {\em delitev brez zavisti\/} vedno {\em sorazmerna\/}, obratna implikacija pa ne drži.
 
-\subsection{*** Algoritmi in rešitve s premikajočim se nožem}
-
-\texttt{Besedilo moram še napisati}
-
-\subsection{*** Izreki o obstoju ?? ?? ?? ?? ??}
-
-\texttt{Besedilo moram še napisati}
+%\subsection{*** Algoritmi in rešitve s premikajočim se nožem}
+%
+%\texttt{Besedilo moram še napisati}
+%
+%\subsection{*** Izreki o obstoju ?? ?? ?? ?? ??}
+%
+%\texttt{Besedilo moram še napisati}
 
 \subsection{Protokoli}
 
@@ -118,7 +119,7 @@ ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak 
 
 \textsl{Vrstni red izbiranja: Tretji igralec, drugi igralec, prvi igralec.}
 
-\item [\textsf{\em Komentar}] V tem primeru je vsakdo dobil kos v velikosti vsaj  $1/3$ celote (v njegovem načinu vrednotenja). Tretji igralec izbira prvi, zato bo gotovo lahko izbral tak kos. Drugi igralec je vsaj dva kosa vrednotil kot večja od  $1/3$, torej je vsaj eden od teh kosov še na voljo po tem, ko tretji vzame svoj kos. Prvi igralec je torto razdelil na enake dele, torej bo v vsakem primeru zadovoljen s kosom, ki mu še ostane.
+\item [\textbf { \em Komentar}] V tem primeru je vsakdo dobil kos v velikosti vsaj  $1/3$ celote (v njegovem načinu vrednotenja). Tretji igralec izbira prvi, zato bo gotovo lahko izbral tak kos. Drugi igralec je vsaj dva kosa vrednotil kot večja od  $1/3$, torej je vsaj eden od teh kosov še na voljo po tem, ko tretji vzame svoj kos. Prvi igralec je torto razdelil na enake dele, torej bo v vsakem primeru zadovoljen s kosom, ki mu še ostane.
 
 \item Sicer (če je v 2. koraku drugi igralec dva kosa označil kot ``slaba'') ponovimo drugi korak, le da je zdaj na potezi tretji igralec. Oznake drugega igralca prekrijemo, tretji igralec jih ne upošteva.
 
@@ -126,15 +127,15 @@ ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak 
 
 \textsl{Vrstni red izbiranja: Drugi igralec, tretji igralec, prvi igralec.}
 
-\item [\textsf{\em Komentar}] Razmislek je podoben prejšnjemu. Drugi igralec lahko izbere kos, ki ga ni označil kot ``slabega'', saj izbira prvi. Tako nujno dobi vsaj $1/3$ celote. Tretjemu igralcu sta se zdela vsaj dva kosa enako velika (in oba večja od $1/3$) in vsaj en tak kos mu je še vedno na voljo. Prvi igralec je zadovoljen s preostalim kosom, saj je zanj vreden natačno $1/3$.
+\item [\textbf{\em Komentar}] Razmislek je podoben prejšnjemu. Drugi igralec lahko izbere kos, ki ga ni označil kot ``slabega'', saj izbira prvi. Tako nujno dobi vsaj $1/3$ celote. Tretjemu igralcu sta se zdela vsaj dva kosa enako velika (in oba večja od $1/3$) in vsaj en tak kos mu je še vedno na voljo. Prvi igralec je zadovoljen s preostalim kosom, saj je zanj vreden natačno $1/3$.
 
 \item Če je tretji igralec v četrtem koraku dva kosa označil kot ``slaba'', mora prvi igralec vzeti kos, ki sta ga tako drugi kot tretji igralec določila za ``slabega''.
 
-\item [\textsf{\em Komentar}]Tak kos gotovo obstaja. Prepričamo se lahko na konkretnem primeru ali pa upoštevamo Dirichletovo načelo - če imamo tri kose in štiri oznake ``slabo'', potem je vsaj en kos moral dobiti dve taki oznaki. S tem je prvi igralec dobil natanko $1/3$ torte, preostala igralca pa mislita, da je dobil strogo manj kot $1/3$. Po njunem vretnotenju je preostanek torte skupaj vreden več kot $2/3$ celote.
+\item [\textbf{\em Komentar}]Tak kos gotovo obstaja. Prepričamo se lahko na konkretnem primeru ali pa upoštevamo Dirichletovo načelo - če imamo tri kose in štiri oznake ``slabo'', potem je vsaj en kos moral dobiti dve taki oznaki. S tem je prvi igralec dobil natanko $1/3$ torte, preostala igralca pa mislita, da je dobil strogo manj kot $1/3$. Po njunem vretnotenju je preostanek torte skupaj vreden več kot $2/3$ celote.
 
 \item Preostala kosa torte ponovno združimo. To novo torto si drugi in tretji igralec razdelita po metodi ``Reži in izberi''.
 
-\item [\textsf{\em Komentar}] Ker smo v prejšnjem komentarju pokazali, da si bosta razdelila več kot $2/3$ celote, z upoštevanjem uvodoma omenjenaga dejstva, da metoda ``Reži in izberi'' pripelje do sorazmerne delitve, lahko sklepamo, da je končna razdelitev res  {\em sorazmerna}.
+\item [\textbf{\em Komentar}] Ker smo v prejšnjem komentarju pokazali, da si bosta razdelila več kot $2/3$ celote, z upoštevanjem uvodoma omenjenaga dejstva, da metoda ``Reži in izberi'' pripelje do sorazmerne delitve, lahko sklepamo, da je končna razdelitev res  {\em sorazmerna}.
 
 \end{protokol}
 
@@ -158,19 +159,19 @@ Kos preimenujemo v $P_2$ (neodvisno od tega, ali je bil obrezan). Tisto, kar je 
 
 \item Za igralce od tretjega do zadnjega po vrsti naredimo naslednje: Igralec $i$ vzame kos $P_{i-1}$ od svojega predhodnika in ravna enako kot drugi igralec v prejšnjem koraku (torej kos obreže ali pa ne). Kos preimenujemo v $P_i$ in podamo naprej, morebitne ostanke pa shranjujemo na enem mestu.
 
-\item [\textsf{\em Komentar}] Sedaj vsak igralec $i$ misli, da je kos $P_i$ velikosti $1/n$ ali manjši. Prav tako velja, da je kos $P_i$ vedno večji ali enak $P_{i+1}$, zato vsi mislijo, da je kos $P_n$ vreden kvečjemu $1/n$.
+\item [\textbf{\em Komentar}] Sedaj vsak igralec $i$ misli, da je kos $P_i$ velikosti $1/n$ ali manjši. Prav tako velja, da se kos z vsakim novim igralec kvečjemu zmanjša, zato vsi mislijo, da je kos $P_n$ vreden največ $1/n$.
 
 \item Kos $P_n$ dobi zadnji igralec, ki je obrezal kos, ali pa prvi igralec, če ga ni nihče obrezal.
 
-\item [\textsf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga sam naredil tako velikega. % Je to razumljivo?
+\item [\textbf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga sam naredil tako velikega. % Je to razumljivo?
 
-\item Vse obrezane koščke združimo z ostankom torte (iz prvega koraka), tako da dobimo novo torto, ki jo želimo sorazmerno razdeliti med $n - 1$ ljudi. Ponavljamo enak postopek, dokler nam ne ostaneta samo dva igralca.
+\item Vse obrezane koščke združimo s preostankom začetne torte (iz prvega koraka), tako da dobimo novo torto, ki jo želimo sorazmerno razdeliti med $n - 1$ ljudi. Ponavljamo enak postopek, dokler nam ne ostaneta samo dva igralca.
 
-\item [\textsf{\em Komentar}] Kdor dobi kos v drugem krogu razdeljevanja, dobi natančno $1/(n - 1)$ nove torte. On in vse drugi se strinjajo, da je ta nova torta velika vsaj $(n - 1)/n$, torej je ta igralec dobil vsaj $1/n$ začetne torte.
+\item [\textbf{\em Komentar}] Kdor dobi kos v drugem krogu razdeljevanja, dobi natančno $1/(n - 1)$ nove torte. On in vse drugi se strinjajo, da je ta nova torta velika vsaj $(n - 1)/n$, torej je ta igralec dobil vsaj $1/n$ začetne torte.
 
 \item Za zadnja igralca sledimo metodi ``Reži in izberi''.
 
-\item [\textsf{\em Komentar}] Kot prej - vsakdo vrednoti svoj kos vsaj kot $1/n$ celote.
+\item [\textbf{\em Komentar}] Kot prej - vsakdo vrednoti svoj kos vsaj kot $1/n$ celote.
 
 \end{protokol}
 
@@ -178,9 +179,6 @@ Kos preimenujemo v $P_2$ (neodvisno od tega, ali je bil obrezan). Tisto, kar je 
 
 Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo. V spodnjem protokolu je poleg obrezovanja pomemben tudi pojem ``nepreklicne prednosti'' enega igralca pred drugim in zamisel o postopni delitvi. Našteti trije elementi protokola so med seboj tesno povezani. Preprosto rečeno, z obrezovanjem pridemo do tega, da del torte razdelimo {\em brez zavisti}, del pa ostane nerazdeljen (ta del setavljajo koščki, ki so nastali zaradi obrezovanja večjih kosov). Da lahko razdelimo še ta preostanek, potrebujemo ``nepreklicno prednost'' enega igralca pred drugim. Podrobneje bomo to idejo razložili spodaj v kometnarjih ob konkretnem primeru.
 
-D
-
-Nepreklicna prednost
 
 \begin{protokol}
 
@@ -198,518 +196,113 @@ ali pa obreže enega od kosov. \textcolor{gray}{(Obreže največjega, in sicer t
 
 Če je drugi igralec obrezal kos, ga je dolžan izbrati (če ga ni pred njim izbral tretji igralec).
 
-\item [\textsf{\em Komentar}] Tako smo {\em brez zavisti} razdelili del torte in dobili delitev ${\{X_1, X_2, X_3, O\}}$. Oglejmo si, zakaj nihče izmed igralcev ni zavisten drugemu. Tretji igralec izbira prvi, zato seveda lahko izbere ustrezen kos. Drugi igralec je poskrbel, da bosta vsaj dva kosa enako velika in največja, zato mu je vsaj en tak gotovo še na voljo. Prvi igralec je torto razrezal, obrezani kos pa je nujno izbral eden od prejšnjih igralcev, ker tako zahtevajo pravila. Zato je tudi on zadovoljen s kosom, ki mu ostane.
+\item [\textbf{\em Komentar}] Tako smo {\em brez zavisti} razdelili del torte in dobili delitev ${\{X_1, X_2, X_3, O\}}$. Oglejmo si, zakaj nihče izmed igralcev ni zavisten drugemu. Tretji igralec izbira prvi, zato seveda lahko izbere ustrezen kos. Drugi igralec je poskrbel, da bosta vsaj dva kosa enako velika in največja, zato mu je vsaj en tak gotovo še na voljo. Prvi igralec je torto razrezal, obrezani kos pa je nujno izbral eden od prejšnjih igralcev, ker tako zahtevajo pravila. Zato je tudi on zadovoljen s kosom, ki mu ostane.
 
 \item Če drugi igralec ni obrezal kosa, smo končali, saj ni ostanka in smo že dosegli {\em delitev brez zavisti}. V nasprotnem primeru pa sta si drugi in tretji igralec razdelila en obrezan in en neobrezan kos. Tistega, ki je dobil neobrezan kos, imenujmo ``rezalec'', drugega pa ``ne-rezalec''. ``Rezalec'' sedaj razdeli $O$ na tri dele.
 
-\item [\textsf{\em Komentar}] Rekli bomo, da ima prvi igralec ``nepreklicno prednost'' pred ne-rezalcem', saj je slednji v delni razdelitvi dobil obrezan kos, ki je za prvega gotovo manjši od $1/3$. Zato prvi igralec ne-rezalcu ne bo zavidal ne glede na to, kako bo $O$ razdeljen mednje.
+\item [\textbf{\em Komentar}] Rekli bomo, da ima prvi igralec ``nepreklicno prednost'' pred ne-rezalcem, saj je slednji v delni razdelitvi dobil obrezan kos, ki je za prvega gotovo manjši od $1/3$. Zato prvi igralec ne-rezalcu ne bo zavidal ne glede na to, kako bo $O$ razdeljen mednje.
 
 \item Igralci si izberejo kose, na katere je bil razdeljen ostanek. \textcolor{gray}{(Vsak izbere največji kos ali enega od enako velikih največjih kosov.)}
 
 \textsl{Vrstni red izbiranja: Ne-rezalec, prvi igralec, rezalec.}
 
-\item [\textsf{\em Komentar}] Razdelili smo celotno torto.Vemo že, da je delitev ${\{X_1, X_2, X_3\}}$ {\em brez zavisti}, zato razmislimo le o delitvi ostanka. Ne-rezalec ne zavida nikomur, saj izbira prvi. Prvi igralec ne zavida ne-rezalcu zaradi ``nepreklicne prednosti'', kar smo utemeljili v prejšnjem komentarju, prav tako pa ne zavida rezalcu, saj ta izbira zadnji. Rezalec ne zavida nikomur, saj je sam razdelil $O$ na (zanj) enake kose. Da dobimo iskano delitev ${\{P_1, P_2, P_3\}}$, preprosto za vsakega od igralcev združimo kosa $X_i$ in $O_i$, kjer so $O_i$ kosi, na katere smo razdelili ostanek $O$.
+\item [\textbf{\em Komentar}] Razdelili smo celotno torto.Vemo že, da je delitev ${\{X_1, X_2, X_3\}}$ {\em brez zavisti}, zato razmislimo le o delitvi ostanka. Ne-rezalec ne zavida nikomur, saj izbira prvi. Prvi igralec ne zavida ne-rezalcu zaradi ``nepreklicne prednosti'', kar smo utemeljili v prejšnjem komentarju, prav tako pa ne zavida rezalcu, saj ta izbira zadnji. Rezalec ne zavida nikomur, saj je sam razdelil $O$ na (zanj) enake kose. Da dobimo iskano delitev ${\{P_1, P_2, P_3\}}$, preprosto za vsakega od igralcev združimo kosa $X_i$ in $O_i$, kjer so $O_i$ kosi, na katere smo razdelili ostanek $O$.
 
 \end{protokol}
 
 \section{Delitev brez zavisti med $n$ igralcev}
 
-Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo. V spodnjem protokolu je poleg obrezovanja pomemben tudi pojem ``nepreklicne prednosti'' enega igralca pred drugim in zamisel o postopni delitvi. Našteti trije elementi protokola so med seboj tesno povezani. Preprosto rečeno, z obrezovanjem pridemo do tega, da del torte razdelimo {\em brez zavisti}, del pa ostane nerazdeljen (ta del setavljajo koščki, ki so nastali zaradi obrezovanja večjih kosov). Da lahko razdelimo še ta preostanek, potrebujemo ``nepreklicno prednost'' enega igralca pred drugim. Podrobneje bomo to idejo razložili spodaj v kometnarjih ob konkretnem primeru.
+Zadnji protokol je najdaljši in najmanj intuitiven, saj je {\em delitev brez zavisti} težje doseči kot {\em sorazmerno}. Kot v prejšnjem protokolu bomo z obrezovanjem prišli do delne razdelitve.
+Čeprav je protokol uporaben za splošen $n$, bomo zaradi jasnosti opisali primer za $n = 4$. 
+%V komentarjih bomo povedali, kako postopati v primeru večjega $n$. Za razliko od prej naštetih protokolov tokrat začne drugi igralec, ker bo tako protokol bolj pregleden.
 
-D
-
-Nepreklicna prednost
+%%    ŠE MANJKA RAZLAGA !!!
 
 \begin{protokol}
 
-\item Prvi igralec
+\item Drugi igralec razdeli torto na štiri dele \textcolor{gray}{(ki so zanj enako veliki)} in jih poljubno razdeli med vse štiri igralce.
+
+\item Vsak od preostalih treh igralcev ima možnost ugovarjati. \textcolor{gray}{(To stori, če in samo če zavida kateremu od drugih igralcev)}
+
+\item Če ni ugovorov, smo končali in vsakdo obdrži dodeljeni kos.
+
+\item Sicer izberemo najmanjši tak $i$, da je $i$-ti igralec ugovarjal. Brez škode za splošnost privzemimo, da je ugovarjal prvi igralec in njegov kos imenujmo $B$. Nek drug kos imenujmo $A$. \textcolor{gray}{(Tako imenujemo kos tistega igralca, ki mu je prvi igralec zavidal.)}
+
+\item [\textbf{\em Komentar}] Jasno je, da se prvemu igralcu kos $A$ zdi večji od $B$, sicer ne bi bil zavisten. Iz prvega koraka vemo, da se drugemu igralcu zdita kosa enako velika, saj je on razrezal torto. Na tem mestu preostala kosa (torej tista izmed začetnih štirih, ki nista ne $A$ in ne $B$) združimo in damo na stran, ta del bomo razdelili kasneje.
+
+\item Prvi igralec določi naravno število $r$, večje ali enako 10. \textcolor{gray}{(To stori tako, da bo za vsako razdelitev kosa $A$ na $r$ podkosov še vedno menil, da je $A$ večji od $B$, tudi po tem, ko bomo iz razdelitve $A$ odstranili 7 najmanjših kosov.)} % Se razume, da so najmanjši subjektivno, glede na prvega igralca?
+
+\item [\textbf{\em Komentar}] Tak $r$ je lahko izbrati. Skupna vrednost vseh 7 najmanjših podkosov kosa $A$ gotovo ni večja od sedemkratnika povprečne vrednosti vseh $r$ podkosov. Pri delitvi na $r$ delov je povprečna vrednost enega kosa $\mu_1(A)/r$. Ker želimo, da bi bil $A$ brez sedmih najmanjših kosov še zmeraj vreden več od (celotnega) $B$, mora prvi igralec izbrati $r$, da bo veljalo:
+
+$$ \mu_1(A) - 7 \cdot \frac{\mu_1(A)}{r} > \mu_1(B) $$
+$$r \cdot \mu_1(A) - 7 \mu_1(A) > r \cdot \mu_1(B) $$
+$$r > \frac{7 \mu_1(A)}{\mu_1(A) - \mu_1(B)} $$
+
+\item Drugi igralec razdeli tako $A$ kot $B$ na $r$ delov \textcolor{gray}{(ki so zanj enako veliki)}.
+
+\item Prvi igralec izbere \textcolor{gray}{(najmanjše)} tri podkose kosa $B$ in jih imenuje $Z_1, Z_2, Z_3$ ter tri podkose kosa $A$, ki jih imenuje $Y_1, Y_2, Y_3$. Za podkose kosa $A$ ima dve možnosti. Ali vzame tri \textcolor{gray}{(največje)} podkose \textcolor{gray}{(če meni, da je vsak od teh treh posebej večji od največjega izmed $Z_1, Z_2, Z_3$)} in največ dva od teh treh obreže \textcolor{gray}{(na velikost najmanjšega od izbranih podkosov kosa $A$)} ali pa vzame \textcolor{gray}{(največji)} podkos in ga razdeli na tri \textcolor{gray}{(enako velike)} dele.
+
+\item [\textbf{\em Komentar}] Strategija prvemu igralcu zagotavlja, da bo v vsakem primeru dobil tri enako velike kose (podkosi $Y_1, Y_2, Y_3$), ki so večji od največjega izmed $Z_1, Z_2, Z_3$. Drugi igralec pa misli, da so $Z_1, Z_2, Z_3$ vsi enako veliki in vsak od teh posebej vsaj tako velik kot $Y_1, Y_2, Y_3$.
+
+\item Tretji igralec vzame teh 6 posebej označenih kosov in ne stori nič \textcolor{gray}{(če meni, da sta vsaj dva kosa enako velika in največja)} ali pa obreže enega izmed šestih kososv. \textcolor{gray}{(O breže največjega na velikost drugega največjega.)}
+
+\item  Sedaj si štirje igralci izberejo vsak po en kos izmed kosov $Y_1, Y_2, Y_3, Z_1, Z_2, Z_3$. \textcolor{gray}{(Vsak izbere največji kos ali enega od nekaj enako velikih največjih kosov)}. Dodatno zahtevamo naslednje: Tretji igralec mora izbrati kos, ki ga je obrezal v prejšnjem koraku, če mu je ta še na voljo. Drugi igralec mora vzeti enega od $Z$-jev, prvi pa enega od $Y$-ov.
+
+\textsl{Vrstni red izbiranja: Četrti igralec, tretji igralec, drugi igralec, prvi igralec.}
+
+\item [\textbf{\em Komentar}] Tako smo torto delno razdelili. Dobimo razdelitev ${\{X_1, X_2, X_3, X_4, O_1\}}$, kjer je ${\{X_1, X_2, X_3, X_4\}}$ {\em delitev brez zavisti}, $O_1$ pa ostanek, sestavljen iz vseh do sedaj nastalih obrezkov iz zlepka neporabljenih kosov iz drugega koraka. Velja še, da se prvemu igralcu zdi kos $X_1$ strogo večji od kos $X_2$, ki je pripadel drugemu igralcu. Označimo (pozitivno) razliko med kosoma $X_1$ in $X_2$ z $\epsilon$.
+
+\item Prvi igralec imenuje pozitivno naravno število $s$. \textcolor{gray}{(Za $s$ naj velja, da je $[4\mu_1(O_1)/5]^s$ še zmeraj manjše od $\epsilon$}. 
+
+\item [\textbf{\em Komentar}] Število $s$ pomeni število ponovitev osnovne metode ``Reži in izberi'', kot jo bomo opisali spodaj v korakih od 11.~do 14.
+
+% MA NJ KA !
+
+\item Prvi igralec razdeli $O_1$ na pet delov \textcolor{gray}{(ki so zanj enako veliki)}.
+
+\item Drugi igralec vzame teh pet kosov, izbere \textcolor{gray}{(največje)} tri izmed njih in obreže največ dva od teh treh \textcolor{gray}{(na velikost najmanjšega tako, da bodo od dobljenih petih kosov obstajali vsaj trije enako veliki največji kosi)}. Obrezke vedno shranjujemo ločeno.
+
+\item Tretji igralec dobi pet (morda obrezanih) kosov od drugega igralca, izbere \textcolor{gray}{(največja)} dva in enega od njiju morebiti obreže. \textcolor{gray}{(To stori tako, da bosta na koncu vsaj dva kosa od petih kosov enako velika in največja)}.
+
+\item Zdaj (delno) razdelimo ostanek $O_1$ med štiri igralce tako, da vsak izbere enega od petih kosov \textcolor{gray}{(kot prej - vsak izbere največji kos ali enega od enako velikih največjih kosov)}. Ob tem dodatno zahtevamo, da drugi in tretji igralec vzameta kos, ki sta ga sama obrezala, če jima je tak kos še na voljo, ko prideta na vrsto za izbiranje.
+
+\textsl{Vrstni red izbiranja: Četrti igralec, tretji igralec, drugi igralec, prvi igralec.}
+
+\item Še $(s - 1)$-krat ponovimo korake od 11.~do 14, vsakokrat na ostanku predhodne ponovitve. Torej, vsakokrat razdelimo, kar je ostalo nerazdeljeno v 13.~koraku.
+
+\item [\textbf{\em Komentar}]  S tem smo {\em delitev brez zavisti} razdelili še en del torte, konkretno del ostanka $O_1$. Vsak igralec združi kos, ki ga je prejel v 9.~koraku, s koščki, ki jih je dobil z $s$ ponovitvami prej omenjenih korakov, in zlepek vsek svojih koščkov imenuje $X'_i$. Dobili smo torej razdelitev ${\{X'_1, X'_2, X'_3, X'_4, O_2\}}$ začetne torte, kjer je ${\{X'_1, X'_2, X'_3, X'_4\}}$ {\em delitev brez zavisti}. Dosegli smo še, da prvi igralec vrednoti svoj kos $X'_1$ kot večjega od unije kosov $X'_2$ in $O_2$. Zato lahko povemo, da ima prvi igralec ``nepreklicno prednost'' pred drugim igralcem ter par $(1,2)$ dodamo v (do sedaj prazno) množico $\P$. Množica $\P$ je podmnožica ${\{1, 2, 3, 4\}} \times {\{1, 2, 3, 4\}}$, ki vsebuje pare $(i, j)$, za katere velja, da ima $i$-ti igralec ``nepreklicno prednost'' pred $j$-tim igralcem (od tod ime množice - ``P'' kot prednost).
+
+\item Drugi igralec razdeli $O_2$ na 12 kosov \textcolor{gray}{(ki so zanj enako veliki)}.
+
+\item Vsak od igralcev se opredeli kot bodisi igralec tipa $E$ \textcolor{gray}{(če se mu zdijo vsi kosi enako veliki)} bodisi igralec tipa $R$ \textcolor{gray}{(če se mu zdita vsaj dva kosa različno velika)}. Drugi igralec je avtomatično razglašen za igralca tipa $E$.
+
+\item Če velja, da je  $R \times E \subset \P$, damo vseh 12 kosov igralcem iz $A$ tako, da vsak dobi enako število kosov (vemo, da se jim zdijo kosi enako veliki). S tem smo končali delitev celotne torte.
+
+\item V nasprotnem primeru pa izberemo leksikografsko najmanjši par $(i, j)$ iz $R \times E$, ki ni v $\P$. Sedaj se vrnemo v 4.~korak, kjer vlogo prvega igralca dobi $i$-ti igralec, vlogo drugega pa $j$-ti. Namesto celotne torte sedaj razdeljujemo $O_2$ (ponovno združimo 12 kosov iz 16.~koraka).
+
+\item Ponavljamo korake od 5.~do 18.
+
+ \item [\textbf{\em Komentar}] Vsakokrat v 15.~koraku v množico $\P$ dodamo nov par $(i, j)$. Ker velja $R \times E \subset {\{1, 2, 3, 4\}} \times {\{1, 2, 3, 4\}}$ in $\P \subset {\{1, 2, 3, 4\}} \times {\{1, 2, 3, 4\}}$, mora po največ 16 korakih veljati tudi $R \times E \subset \P$. Čim to velja, v 18.~koraku zaključimo postopek, saj smo razdelili vso torto.
  
  \end{protokol}
-
-Vrednosti multiplikativne funkcije $f$  so določene že z vrednostmi pri
-potencah praštevil. Če namreč razcepimo 
-\[
-n\ =\ p_1^{k_1} p_2^{k_2} \cdots p_r^{k_r},
-\]
-kjer so $p_1, p_2, \ldots, p_r$ različna praštevila in $k_1, k_2, \ldots, k_r \in \N$, je
-\[
-f(n)\ =\ f\!\left(p_1^{k_1}\right) f\!\left(p_2^{k_2}\right) \cdots f\!\left(p_r^{k_r}\right).
-\]
-
-Pomembni multiplikativni funkciji sta {\em Eulerjeva funkcija\/} $\varphi(n)$ in {\em M\"obiusova funkcija\/} $\mu(n)$. Oglejmo si nekaj njunih lastnosti.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Eulerjeva funkcija}
-
-
-\begin{definicija}
-Za vse $n \in \N$ s $\varphi(n)$ označimo število 
-celih števil iz množice $\{1, 2, \ldots, n\}$, ki so tuja številu $n$.
-Preslikavo $\varphi: \N \to \N$ imenujemo \em{Eulerjeva funkcija}.
-\end{definicija}
-
-\begin{zgled}
-Tabela %\ref{fi} prikazuje izračun prvih šest vrednosti funkcije $\varphi(n)$. V $n$-ti vrstici so 
-krepko natisnjena števila med $1$ in $n$, ki so tuja številu $n$. %Slika~\ref{fi100} pa grafično prikazuje prvih 100 vrednosti funkcije $\varphi(n)$.
-\begin{table}[h]
-\[
-\begin{array}{clc}
- n & \{1,2,\ldots, n\}          & \varphi(n)       \\
- \hline
-protokol'' (Sklic Sklic Sklic Sklic Sklic Sklic Sklic). \\ Protokol je zaporedje navodil, ki ob upoštevarazde & \{{\bf 1}\}                    &     1      \\
- 2 & \{{\bf 1},2 \}                &     1      \\
- 3 & \{{\bf 1,2},3 \}             &     2      \\
- 4 & \{{\bf 1},2,{\bf 3},4 \} &     2      \\
- 5 & \{{\bf 1,2,3,4},5 \}       &     4      \\
- 6 & \{{\bf 1},2,3,4,{\bf 5},6 \} &     2
-\end{array}
-\] 
-\caption{Vrednosti funkcije $\varphi(n)$ za $n = 1,2,\ldots,6$}\label{fi}
-\end{table}
-
-%\begin{figure}[h]
-%\includegraphics{fi100.pdf}
-%\caption{Vrednosti funkcije $\varphi(n)$ za $n = 1,2,\ldots,100$}\label{fi100}
-%\end{figure}
-\end{zgled}
-
-Računanje $\varphi(n)$ po definiciji je pri velikem $n$ zelo zamudno. Vendar ima 
-Eulerjeva funkcija lepe lastnosti, zaradi katerih lahko njeno vrednost izračunamo
-tudi pri velikem argumentu, če ga le znamo razcepiti na prafaktorje.
-
-Če je $p$ praštevilo, med števili $1,2,\ldots, p$ edinole število $p$ ni tuje številu $p$,
-torej je $\varphi(p) = p-1$. Skoraj prav tako preprosto lahko poiščemo vrednost $\varphi(n)$,
-če je $n$ potenca nekega praštevila.
-
-\begin{trditev}
-\label{fipp}
-Naj bo $p$ praštevilo in $k \in \N$. Potem je $\varphi(p^k) = p^k-p^{k-1}$.
-\end{trditev}
-
-\noindent
-{\em Dokaz:\/}% ? tevilo $a$ je tuje številu $p^k$ natanko tedaj, ko ni večkratnik praštevila $p$.
-Med števili $1,2,\ldots, p^k$ je natanko $p^k/p = p^{k-1}$ večkratnikov števila $p$, torej je $\varphi(p^k) = p^k-p^{k-1}$. 
-\qed
-
-\begin{izrek}
-\label{fimult}
-Eulerjeva funkcija je multiplikativna.
-\end{izrek}
-
-\noindent
-{\em Dokaz:\/} Vzemimo tuji naravni števili $a$ in $b$. Zapišimo vsa števila med $1$ in $ab$
-v obliki tabele z $a$ vrsticami in $b$ stolpci:
-\[
-\begin{array}{cccc}
-1 & 2 & \cdots & \ b \\
-b+1 & b+2 & \cdots & \ 2b \\
-2b+1 & 2b+2 & \cdots & \ 3b \\
-\vdots & \vdots & \cdots & \ \vdots \\
-(a-1)b+1 & (a-1)b+2 & \cdots & \ ab 
-\end{array}
-\]
-Za vsako število velja, da je tuje številu $ab$ natanko tedaj, ko je tuje številu $a$ in tuje številu $b$.
-Vrednost $\varphi(ab)$ lahko torej dobimo tako, da preštejemo, koliko je v gornji tabeli števil, ki so tuja
-tako številu $a$ kot tudi številu $b$. 
-
-? tevila v posameznem stolpcu dajejo vsa isti ostanek pri deljenju z $b$. Torej so bodisi vsa tuja številu
-$b$ bodisi mu ni tuje nobeno od njih. Stolpcev, katerih elementi so tuji številu $b$, je toliko, kot je
-takih števil v prvi vrstici tabele, teh pa je ravno $\varphi(b)$.
-
-Različna števila v posameznem stolpcu dajo različne ostanke pri deljenju z $a$. Če namreč števili
-$k_1 b + r$ in $k_2 b + r$, kjer je $0 \le k_1, k_2 \le a-1$, dasta isti ostanek pri deljenju z $a$, je njuna razlika $(k_1 - k_2) b$
-deljiva z $a$. Ker sta števili $a$ in $b$ tuji, sledi, da je z $a$ deljiva razlika $k_1 - k_2$.
-To pa je možno le, če je $k_1 = k_2$, saj je $-(a-1) \le k_1 - k_2 \le a-1$. Ker je dolžina stolpca
-enaka $a$, dobimo pri deljenju elementov stolpca z $a$ ravno vse možne ostanke $0, 1,\ldots, a-1$.
-Torej je v vsakem stolpcu $\varphi(a)$ števil tujih $a$. 
-
-To velja tudi za $\varphi(b)$ stolpcev, katerih elementi so tuji številu $b$. Potemtakem je v gornji tabeli
-$\varphi(b)\varphi(a)$ števil, ki so tuja tako številu $b$ kot tudi številu $a$. 
-Torej je $\varphi(ab) = \varphi(a)\varphi(b)$, kar pomeni, da je Eulerjeva funkcija multiplikativna. \qed
-
-
-\begin{zgled}
-Izračunajmo $\varphi(10^k)$. Ker je $10^k = 2^k 5^k$, je po izreku \ref{fimult} in trditvi \ref{fipp}
-\[
-\varphi(10^k)\ =\ \varphi(2^k)\varphi(5^k)\ =\ (2^k - 2^{k-1})(5^k - 5^{k-1})\ =\ 4\times 10^{k-1}.
-\]
-\end{zgled}
-
-
-\begin{posledica}
-\[
-\varphi(n)\ =\ n \times \prod_{p\,|\,n} \left(1 - \frac{1}{p}\right),
-\]
-\end{posledica}
-kjer $p$ preteče vse različne prafaktorje števila $n$.
-
-\noindent
-{\em Dokaz:\/} Naj bo $n = \prod_{i=1}^r p_i^{k_i}$,
-kjer so $p_1, p_2, \ldots, p_r$ različna praštevila in $k_1, k_2, \ldots, k_r \in \N$. Po izreku 
-\ref{fimult} in trditvi \ref{fipp} je potem
-\begin{eqnarray*}
-\varphi(n) &=& \prod_{i=1}^r \varphi\left(p_i^{k_i}\right)
-\ =\ \prod_{i=1}^r \left(p_i^{k_i} - p_i^{k_i-1}\right) \\
- &=& \left(\prod_{i=1}^r p_i^{k_i}\right) \times \prod_{i=1}^r \left(1 - \frac{1}{p_i}\right)
-\ =\ n \times \prod_{p\,|\,n} \left(1 - \frac{1}{p}\right). \qedm
-\end{eqnarray*}
-
-
-\begin{trditev}
-Za vse $n \in \N$ velja enačba
-\begin{equation}
-\label{fisum}
-\sum_{d\,|\,n} \varphi(d)\ =\  n,
-\end{equation}
-kjer $d$ preteče vse pozitivne delitelje števila $n$.
-\end{trditev}
-
-\noindent
-{\em Dokaz:\/} Za vse delitelje $d$ števila $n$ označimo
-\[
-A_d\ =\ \left\{\frac{k n}{d};\ k \in \Z,\ 0 \le k < d,\ D(k,d) = 1\right\}.
-\]
-Recimo, da je $k_1 n/d_1 = k_2 n/d_2$, kjer je $D(k_1,d_1) = D(k_2,d_2) = 1$. Potem 
-je $k_1 d_2 = k_2 d_1$, od koder sledi, da $d_1$ deli $d_2$ in obratno, kar pomeni,
-da je $d_1 = d_2$. Od tod zaključimo, da so si množice $A_d$ paroma tuje,
-torej je
-\[
-\left|\bigcup_{d\,|\,n} A_d\right|\ =\ \sum_{d\,|\,n} |A_d|\ =\ \sum_{d\,|\,n} \varphi(d).
-\]
-Po drugi strani pa je
-\[
-\bigcup_{d\,|\,n} A_d\ =\ \{0, 1, \ldots, n-1\}.
-\]
-Res, naj bo $k n/d \in A_d$. Ker $d$ deli $n$, je število $k n/d$ celo, iz $0 \le k < d$ pa sledi $0 \le k n/d < n$,
-torej $k n/d \in \{0, 1, \ldots, n-1\}$. Vzemimo zdaj še poljuben $j \in \{0, 1, \ldots, n-1\}$
-in označimo: $k = j/D(n,j)$, $d = n/D(n,j)$. Potem je $j = k D(n,j) = k n/d \in A_d$.
-
-To pa pomeni, da je $\left|\bigcup_{d\,|\,n} A_d\right| = n$ in izrek je dokazan. \qed
-
-\begin{izrek}[Eulerjev izrek]
-Naj bosta $n \in \N$ in $a \in \Z$ tuji števili. Potem je
-\[
-a^{\varphi(n)} \equiv 1 \pmod{n}.
-\]
-\end{izrek}
-
-\noindent
-{\em Dokaz:\/} Naj bodo $k_1, k_2, \ldots, k_{\varphi(n)}$ vsa števila med $1$ in $n$, ki so tuja $n$. Če za indeksa $i,j \in \{1,2,\ldots,\varphi(n)\}$ velja $k_i a \equiv k_j a \!\!\!\pmod{n}$, sledi $n | (k_i a - k_j a)$ in zato $n | (k_i - k_j)$, saj sta števili $n$ in $a$ tuji. To pa je mogoče le, če je $i = j$. ? tevila  $k_1 a, k_2 a, \ldots, k_{\varphi(n)} a$ so torej med seboj paroma nekongruentna po modulu $n$. Ker so tuja številu $n$, je množica njihovih ostankov pri deljenju z $n$ enaka množici $\{k_1, k_2, \ldots, k_{\varphi(n)}\}$. Zato je $k_1 a\cdot k_2 a\cdots k_{\varphi(n)} a \equiv k_1\cdot k_2 \cdots k_{\varphi(n)} \pmod{n}$, od tod pa po krajšanju s produktom $ k_1\cdot k_2 \cdots k_{\varphi(n)}$, ki je tuj številu $n$, dobimo $a^{\varphi(n)} \equiv 1 \!\!\!\pmod{n}$. \qed
-
-\begin{posledica}[mali Fermatov izrek]
-Naj bo $p$ praštevilo in $a \in \Z$ celo število, ki ni deljivo s $p$. Potem je
-\[
-a^{p-1} \equiv 1 \pmod{p}.
-\]
-\end{posledica}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{M\"obiusova funkcija}
-
-
-\begin{definicija}
-Za vse $n \in \N$ naj bo
-\[
-\mu(n)\ =\ \left\{
-\begin{array}{cl}
-0, & \mbox{če\ } n \mbox{\ deljiv s kvadratom praštevila,} \\
-(-1)^r, & \mbox{sicer,}
-\end{array}
-\right.
-\]
-kjer je $r$ število različnih prafaktorjev števila $n$.
-Preslikavo $\mu: \N \to \Z$ imenujemo \em{M\"obiusova funkcija}.
-\end{definicija}
-
-\begin{zgled}
-Tabela \ref{mi} prikazuje prvih nekaj vrednosti funkcije $\mu(n)$. 
-\begin{table}[h]
-\[
-\begin{array}{c|*{10}{r}}
-   n   & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
-\hline
-\mu(n) & \ \ 1 & -1 & -1 & \ \ 0 & -1 & \ \ 1 & -1 & \ \ 0 & \ \ 0 & \ \ 1
-\end{array}
-\]
-\caption{Vrednosti funkcije $\mu(n)$}\label{mi}
-\end{table}
-\end{zgled}
-
-
-\begin{izrek}
-\label{mimult}
-M\"obiusova funkcija je multiplikativna.
-\end{izrek}
-
-\noindent
-{\em Dokaz:\/} Vzemimo tuji naravni števili $a$ in $b$. Če je število $ab$ deljivo s kvadratom praštevila,
-velja to tudi za $a$ ali za $b$. V tem primeru je torej $\mu(ab) = 0 = \mu(a)\mu(b)$.
-Če pa število $ab$ ni deljivo s kvadratom praštevila, velja to tudi za $a$ in za $b$. Naj bo $r$ število različnih
-prafaktorjev števila $a$, $s$ pa število različnih prafaktorjev števila $b$. Potem je število različnih 
-prafaktorjev števila $ab$ enako $r+s$, torej je v tem primeru $\mu(ab) = (-1)^{r+s} = (-1)^r (-1)^s = \mu(a)\mu(b)$.
-\qed
-
-
-\begin{trditev}
-Za vse $n \in \N$ velja enačba
-\begin{equation}
-\label{mirek}
-\sum_{d\,|\,n} \mu(d)\ =\ \left\{
-\begin{array}{ll}
-1, & n = 1, \\
-0, & n > 1,
-\end{array}
-\right.
-\end{equation}
-kjer $d$ preteče vse pozitivne delitelje števila $n$.
-\end{trditev}
-
-\noindent
-{\em Dokaz:\/} 
-Zadošča seštevati po tistih deliteljih $d$ števila $n$, ki imajo same različne prafaktorje (sicer je
-$\mu(d) = 0$). Imenujmo takšne delitelje {\em enostavni}. Naj bo $r$ število različnih prafaktorjev
-števila $n$. ? tevilo enostavnih deliteljev števila $n$, ki imajo natanko $k$ prafaktorjev, je potem ${r \choose k}$,
-prispevek takega delitelja h gornji vsoti pa znaša $\mu(d) = (-1)^k$. Torej je
-\[
-\sum_{d\,|\,n} \mu(d)\ =\ 
-\sum_{k=0}^r (-1)^k {r \choose k} \ =\ 
-\left\{
-\begin{array}{ll}
-1, & r = 0, \\
-0, & r > 0
-\end{array}
-\right.\ =\ \left\{
-\begin{array}{ll}
-1, & n = 1, \\
-0, & n > 1.
-\end{array}
-\right. \qedm
-\]
-
-\begin{pripomba}
-Enačbo (\ref{mirek}) bi lahko uporabili tudi za (rekurzivno) definicijo funkcije $\mu(n)$:
-\[
-\mu(n)\ =\ \left\{
-\begin{array}{cl}
-1, & n = 1, \\
--\displaystyle\sum_{d\,|\,n, \,d < n} \mu(d), & n > 1.
-\end{array}
-\right.
-\]
-\end{pripomba}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-M\"obiusova funkcija igra pomembno vlogo pri {\em M\"obiusovem obratu}, ki nam omogoča
-izraziti aritmetično funkcijo $f(n)$, če poznamo funkcijo $g(n) = \sum_{d\,|\,n} f(d)$,
-kjer $d$ preteče vse pozitivne delitelje števila $n$.
-
-\begin{izrek} \em{(M\"obiusov obrat)} \ 
-Za aritmetični funkciji $f, g$ velja:
-\[
-g(n)\ =\ \sum_{d\,|\,n} f(d)\quad \Longleftrightarrow\quad f(n)\ =\ \sum_{d\,|\,n} \mu\left(\frac{n}{d}\right)g(d)
-\]
-\end{izrek}
-
-\noindent
-{\em Dokaz:\/} 
-Najprej vzemimo, da je $g(n) = \sum_{d\,|\,n} f(d)$ za vse $n \in \N$. Potem je
-\begin{eqnarray*}
-\sum_{d\,|\,n} \mu\left(\frac{n}{d}\right)g(d)
- &=& \sum_{d\,|\,n} \mu\left(\frac{n}{d}\right)\sum_{k\,|\,d} f(k)
-\ =\ \sum_{k\,|\,n} f(k) \sum_{k\,|\,d\,|\,n} \mu\left(\frac{n}{d}\right) \\
- &=& \sum_{k\,|\,n} f(k) \sum_{a\,|\,(n/k)} \mu\left(a\right)\ =\ f(n).
- \end{eqnarray*}
-Drugo enakost smo dobili z zamenjavo vrstnega reda seštevanja, tretjo z uvedbo nove spremenljivke $a = n/d$,
-četrta pa sledi iz (\ref{mirek}).
-
-Vzemimo zdaj, da je $f(n)\ =\ \sum_{d\,|\,n} \mu\left(\frac{n}{d}\right)g(d)$ za vse $n \in \N$. Potem je
-\begin{eqnarray*}
-\sum_{d\,|\,n} f(d)
- &=& \sum_{d\,|\,n} \sum_{k\,|\,d} \mu\left(\frac{d}{k}\right) g(k)
-\ =\ \sum_{k\,|\,n} g(k) \sum_{k\,|\,d\,|\,n} \mu\left(\frac{d}{k}\right) \\
- &=& \sum_{k\,|\,n} g(k) \sum_{b\,|\,(n/k)} \mu\left(b\right)\ =\ g(n).
- \end{eqnarray*}
-Drugo enakost smo dobili z zamenjavo vrstnega reda seštevanja, tretjo z uvedbo nove spremenljivke $b = d/k$,
-četrta pa sledi iz (\ref{mirek}). \qed
-
-
-\begin{zgled}
-\label{tau}
-\begin{itemize}
-\item Iz enačbe (\ref{fisum}) sledi z M\"obiusovim obratom, da je 
-\[
-\varphi(n)\ =\ \sum_{d\,|\,n}\mu\left(\frac{n}{d}\right)d.
-\]
-\item Za vse $n \in \N$ s $\tau(n)$ označimo število vseh pozitivnih deliteljev števila $n$.
-Torej je $\tau(n) = \sum_{d\,|\,n} 1$, od koder sledi z M\"obiusovim obratom, da je 
-\[
-\sum_{d\,|\,n}\mu\left(\frac{n}{d}\right)\tau(d)\ =\ 1.
-\]
-\item Za vse $n \in \N$ s $\sigma(n)$ označimo vsoto vseh pozitivnih deliteljev števila $n$.
-Torej je $\sigma(n) = \sum_{d\,|\,n} d$, od koder sledi z M\"obiusovim obratom, da je 
-\[
-\sum_{d\,|\,n}\mu\left(\frac{n}{d}\right)\sigma(d)\ =\ n.
-\]
-\end{itemize}
-\end{zgled}
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{Kolobar aritmetičnih funkcij}
-
-\begin{definicija}
-Za aritmetični funkciji $f, g: \N \to \C$ in za vse $n \in \N$ naj bo 
-\[
-(f * g)(n) \ =\ \sum_{d\,|\,n} f(d)g\left(\frac{n}{d}\right).
-\]
-Aritmetična funkcija $f * g$ je {\em Dirichletova konvolucija\/} funkcij $f$ in $g$.
-\end{definicija}
-
-\begin{trditev}
-\label{kolo}
-Naj bodo $f$, $g$, $h$ aritmetične funkcije. Potem velja:
-\begin{itemize}
-\item[\rm (i)] $f * g \ =\ g * f$,
-\item[\rm (ii)] $(f * g) * h \ =\ f * (g * h)$,
-\item[\rm (iii)] $f * (g + h) \ =\ f * g + f * h$.
-\end{itemize}
-\end{trditev}
-
-\noindent
-{\em Dokaz:\/} 
-\begin{itemize}
-\item[\rm (i)] 
-Trditev sledi iz zapisa Dirichletove konvolucije v simetrični obliki
-\begin{equation}
-\label{dk}
-(f * g)(n) \ =\ \sum_{d e = n} f(d)g(e),
-\end{equation}
-kjer seštevamo po vseh urejenih parih naravnih števil $(d,e)$, katerih produkt je enak $n$.
-
-\item[\rm (ii)] 
-Z uporabo enačbe (\ref{dk}) izračunamo
-\begin{eqnarray*}
-((f * g) * h)(n) &=& \sum_{d e = n} (f * g)(d)h(e)
-\ =\ \sum_{d e = n} \left(\sum_{a b = d} f(a)g(b)\right)h(e) \\
- &=& \sum_{a b e = n} f(a)g(b)h(e)
- \ =\ \sum_{a c = n} f(a) \sum_{b e = c} g(b)h(e) \\
- &=& \sum_{a c = n} f(a) (g * h)(c)
- \ =\ (f * (g * h))(n).
-\end{eqnarray*}
-Četrto enakost smo dobili z uvedbo nove spremenljivke $c = b e$.
-
-
-\item[\rm (iii)]
-Z uporabo enačbe (\ref{dk}) izračunamo
-\begin{eqnarray*}
-(f * (g + h))(n) &=& \sum_{d e = n} f(d)(g+h)(e)
-\ =\ \sum_{d e = n} f(d)(g(e)+h(e)) \\
- &=& \sum_{d e = n} f(d)g(e) + \sum_{d e = n} f(d)h(e) \\
- &=& (f * g + f * h)(n). \qedm
-\end{eqnarray*}
-
-\end{itemize}
-
-Iz trditve \ref{kolo} sledi, da je množica vseh aritmetičnih funkcij $f: \N \to \C$ z operacijama $+$ in $*$ komutativen kolobar. Imenujemo ga {\em Dirichletov kolobar} in označimo z $\cal D$. 
-
-Funkcija $\varepsilon \in {\cal D}$, ki za vse $n \in \N$ zadošča enačbi
-\[
-\varepsilon(n)\ =\ \left\{
-\begin{array}{ll}
-1, & n = 1, \\
-0, & n > 1,
-\end{array}
-\right.
-\]
-je enica kolobarja $\cal D$, saj za vse $f \in {\cal D}$ in $n \in \N$ velja
-\[
-(f * \varepsilon)(n) \ =\ \sum_{d e = n} f(d)\varepsilon(e) \ =\ f(n)\varepsilon(1) \ =\ f(n).
-\]
-Brez težav se lahko prepričamo tudi, da je $\cal D$ cel kolobar in da je funkcija $f \in {\cal D}$
-obrnljiva natanko tedaj, ko $f(1) \ne 0$.
-
-Zdaj lahko enačbo (\ref{mirek}) prepišemo v obliki
-\[
-\mu * \mathbf{1}\ = \ \varepsilon,
-\]
-kjer $\mathbf{1}$ označuje konstantno funkcijo z vrednostjo $1$. Z drugimi besedami, M\"obiusova funkcija
-je inverz konstantne funkcije $\mathbf{1}$ glede na Dirichletovo konvolucijo:
-\[
-\mu \ =\  \mathbf{1}^{-1}.
-\]
-M\"obiusov obrat lahko torej zapišemo v obliki
-\[
-g\ =\ f * \mathbf{1} \quad \Longleftrightarrow \quad f\ =\ g * \mu,
-\]
-kjer njegova veljavnost postane očitna. Zgled \ref{tau} pa lahko prepišemo v obliki
-\begin{eqnarray*}
-\varphi * \mathbf{1} \ =\ {\rm id}_\N &\Longrightarrow& \varphi\ =\ \mu * {\rm id}_\N, \\
-\tau \ =\ \mathbf{1} * \mathbf{1} &\Longrightarrow& \mu * \tau \ =\ \mathbf{1}, \\
-\sigma \ =\ {\rm id}_\N * \mathbf{1} &\Longrightarrow& \mu * \sigma \ =\ {\rm id}_\N.
-\end{eqnarray*}
-
-
-\section*{Angleško-slovenski slovar strokovnih izrazov}
-
-
-\geslo{arithmetic function}{aritmetična funkcija}
-
-\geslo{coprime}{tuj}
-
-\geslo{Dirichlet convolution}{Dirichletova konvolucija}
-
-\geslo{Dirichlet ring}{Dirichletov kolobar, kolobar aritmetičnih funkcij}
-
-\geslo{divisor}{delitelj}
-
-\geslo{Euler's phi function, Euler's totient function}{Eulerjeva funkcija $\varphi$}
-
-\geslo{Euler's theorem}{Eulerjev izrek}
-
-\geslo{Fermat's little theorem}{mali Fermatov izrek}
-
-\geslo{fundamental theorem of arithmetic}{osnovni izrek aritmetike}
-
-\geslo{greatest common divisor}{največji skupni delitelj, največja skupna mera}
-
-\geslo{least common multiple}{najmanjši skupni večkratnik}
-
-\geslo{M\"obius function}{M\"obiusova funkcija $\mu$}
-
-\geslo{M\"obius inversion}{M\"obiusov obrat, M\"obiusova inverzija}
-
-\geslo{multiple}{večkratnik}
-
-\geslo{prime}{praštevilo; praštevilski}
-
-\geslo{prime factor}{prafaktor}
-
-\geslo{prime number}{praštevilo}
-
-\geslo{relatively prime}{tuj}
-
-
-
-
-\begin{thebibliography}{1}
-\bibitem{AiZ}
-M.~Aigner in G.~M.~Ziegler, \emph{Proofs from THE BOOK}, 2.\ izdaja, Springer, Berlin--Heidelberg--New York, 2001.
-\bibitem{CaW}
-N.~Calkin in H.~S.~Wilf, Recounting the rationals,
-\emph{Amer.~Math.~Monthly}  \textbf{107}  (2000),  360--363.
-\bibitem{Gra}
-J.~Grasselli, \emph{Elementarna teorija števil}, DMFA -- založništvo, Ljubljana, 2009.
-\end{thebibliography}
+ 
+ \section{Zaključek}
+ 
+ V seminarju smo predstavili nekaj osnovnih definicij pravične delitve in pojem protokola. Navedli smo dva protokola, ki vodita do sorazmerne delitve dane celote med igralce, kjer vsak od igralcev dobi najmanj $1/n$ glede na njemu lasten način vrednotenja. V tem primeru ne moremo izključiti možnosti, da bi se nekemu igralcu ob končni razdelitvi zdelo, da je nekdo drug dobil {\em več} od njega in bi mu bil zato zavisten. Druga dva protokola poskrbita tudi za to, saj nas pripeljeta do take razdelitve, da nihče izmed igralcev svojega kosa ne bi želel zamenjati s kosom drugega igralca.
+ 
+ Kot zanimivost povejmo še, da je mogoče vse štiri protokole uporabiti tudi za reševanje ``problema z opravili'', kjer želimo med igralce razdeliti neke naloge (delo). Tedaj si igralci prizadevajo za {\em čim manjši} delež celote, čemur smiselno prilagodimo prej naštete protokole.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{thebibliography}{1}
+%\bibitem{AiZ}
+%M.~Aigner in G.~M.~Ziegler, \emph{Proofs from THE BOOK}, 2.\ izdaja, Springer, Berlin--Heidelberg--New York, 2001.
+%\bibitem{CaW}
+%N.~Calkin in H.~S.~Wilf, Recounting the rationals,
+%\emph{Amer.~Math.~Monthly}  \textbf{107}  (2000),  360--363.
+%\bibitem{Gra}
+%J.~Grasselli, \emph{Elementarna teorija števil}, DMFA -- založništvo, Ljubljana, 2009.
+%\end{thebibliography}
 
 
 
