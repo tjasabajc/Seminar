@@ -46,3 +46,13 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .pdf
+*.aux
+*.nav
+*.gz
+*.toc
+predstavitev.snm
+*.out
+predstavitev.log
+*.log
+predstavitev.pdf
+*.pdf
