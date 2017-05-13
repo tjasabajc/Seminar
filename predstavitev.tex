@@ -1,0 +1,111 @@
+\documentclass{beamer}
+
+\usepackage[slovene]{babel}
+\usepackage{amsfonts,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\usetheme{Warsaw}
+
+\def\N{\mathbb{N}} % mnozica naravnih stevil
+\def\Z{\mathbb{Z}} % mnozica celih stevil
+\def\Q{\mathbb{Q}} % mnozica racionalnih stevil
+\def\R{\mathbb{R}} % mnozica realnih stevil
+\def\C{\mathbb{C}} % mnozica kompleksnih stevil
+
+
+\def\qed{$\hfill\Box$}   % konec dokaza
+\newtheorem{izrek}{Izrek}
+\newtheorem{trditev}{Trditev}
+\newtheorem{posledica}{Posledica}
+\newtheorem{lema}{Lema}
+\newtheorem{definicija}{Definicija}
+\newtheorem{pripomba}{Pripomba}
+\newtheorem{primer}{Primer}
+\newtheorem{zgled}{Zgled}
+\newtheorem{zgledi}{Zgledi uporabe}
+\newtheorem{zglediaf}{Zgledi aritmetičnih funkcij}
+\newtheorem{oznaka}{Oznaka}
+
+\title{Delitev brez zavisti}
+\author{Tjaša Bajc}
+\date{13.\ maj 2017}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Uvod}
+
+Potrebno je privzeti naslednje:
+
+\begin{itemize}
+\item za vse igralce je mera celote $C$ enaka 1, $\mu_i(C) = 1, i \in \{1, 2, \ldots, n\}$;
+\item kosov z enako mero med seboj ne razlikujemo; 
+\item vsak kos je mogoče nadalje razdeliti na $k$ enako velikih kosov;
+\item za vsaka kosa $A$ in $B$ je mogoče kos $A$ obrezati tako, da bo $\mu(A) = \mu(B)$, ali obratno.							
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Kaj pomeni ``pravična'' delitev?}
+
+\begin{definicija}
+Naj bo $C$ množica, $\mu_1, \mu_2, \ldots, \mu_n$ po vrsti mere igralcev $1, 2, \ldots, n$ in $\{P_1, P_2, \ldots, P_n\}$ delitev celote $C$ na $n$ delov, kjer igralcu $i$ pripada kos $P_i$. Delitev je:
+
+\begin{itemize}
+\item {\em sorazmerna\/}, če za vsak $i$ velja $\mu_i(P_i) \geq 1/n$;
+\item {\em brez zavisti\/}, če za vsaka $i, j$ velja $\mu_i(P_i) \geq \mu_i(P_j)$;
+\item{\em super brez zavisti\/}, če za vsaka $i, j$ velja $\mu_i(P_i) > 1/n$ in hkrati $\mu_i(P_j) < 1/n$ .								
+\end{itemize}
+
+\end{definicija}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Protokoli}
+
+Protokol je sestavljen iz
+
+\begin{enumerate}
+\item pravil,
+\item strategij,
+\item dokaza.
+\end{enumerate}
+
+\begin{zgled}
+
+Oglejmo si metodo ``Reži in izberi'' za delitev med dva igralca.
+\begin{enumerate}
+
+\item Prvi igralec razdeli torto na dva dela \textcolor{gray}{(ki sta zanj enako velika)}.
+
+\item Igralca si razdelita kose. Prvi izbere drugi igralec, prvi pa dobi kos, ki ga drugi ni izbral.
+
+\end{enumerate}
+
+{\em Komentar:} Ta delitev je {\em sorazmerna\/} in hkrati {\em brez zavisti\/}. Prvi igralec je dobil natančno $1/2$, drugi pa kvečjemu več. Če namreč njuni meri sovpadata, $\mu_1 = \mu_2$, je prav tako dobil natančno $1/2$, v nasprotnem primeru pa si lahko izbere večjega od obeh kosov.
+
+
+\end{zgled}
+
+\end{frame}
+
+
+\end{document}
