@@ -6,8 +6,10 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 
-\usetheme{Madrid}
-\usecolortheme{wolverine}
+
+
+\usetheme{Copenhagen}
+\usecolortheme{crane}
 
 \def\N{\mathbb{N}} % mnozica naravnih stevil
 \def\Z{\mathbb{Z}} % mnozica celih stevil
@@ -43,9 +45,10 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Uvod}
+\subsection{Začetni privzetki}
 
 \begin{frame}
-\frametitle{Uvod}
 
 Potrebno je privzeti naslednje:
 
@@ -59,9 +62,10 @@ Potrebno je privzeti naslednje:
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\subsection{Različne delitve}
 \begin{frame}
-\frametitle{Kaj pomeni ``pravična'' delitev?}
+
+Kaj pomeni ``pravična'' delitev?
 
 \begin{definicija}
 Naj bo $C$ množica, $\mu_1, \mu_2, \ldots, \mu_n$ po vrsti mere igralcev $1, 2, \ldots, n$ in $\{P_1, P_2, \ldots, P_n\}$ delitev celote $C$ na $n$ delov, kjer igralcu $i$ pripada kos $P_i$. Delitev je:
@@ -77,10 +81,8 @@ Naj bo $C$ množica, $\mu_1, \mu_2, \ldots, \mu_n$ po vrsti mere igralcev $1, 2,
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\subsection{Protokoli}
 \begin{frame}
-
-\frametitle{Protokoli}
 
 Protokol je sestavljen iz
 
@@ -91,13 +93,14 @@ Protokol je sestavljen iz
 \end{itemize}
 
 \begin{zgled}
-
-Oglejmo si metodo ``Reži in izberi'' za delitev med dva igralca.
+Metoda ``Reži in izberi'' za delitev med dva igralca.
 \begin{enumerate}
 
 \item Prvi igralec razdeli torto na dva dela \textcolor{gray}{(ki sta zanj enako velika)}.
 
-\item Igralca si razdelita kose. Prvi izbere drugi igralec, prvi pa dobi kos, ki ga drugi ni izbral.
+\item Igralca si razdelita kose. 
+
+{\em Vrstni red izbiranja: Drugi igralec, prvi igralec}
 
 \end{enumerate}
 
@@ -107,6 +110,169 @@ Oglejmo si metodo ``Reži in izberi'' za delitev med dva igralca.
 \end{zgled}
 
 \end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Sorazmerna delitev}
+\subsection{Trije igralci}
+\begin{frame}
+
+
+\frametitle{Protokol za sorazmerno delitev med tri igralce}
+\begin{enumerate}
+
+\item Prvi igralec razdeli torto na tri dele \textcolor{gray}{(ki so zanj enako veliki)}.
+
+\item Drugi igralec lahko ne naredi ničesar \textcolor{gray}{(če vsaj dva od treh kosov vrednoti kot večja od $1/3$ celote)}
+
+ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak posebej zanj vredna strogo manj kot $1/3$ celote.)}
+
+\item Če drugi igralec v prejšnjem koraku ni storil nič, smo končali in si igralci izberejo kose torte.
+
+\textsl{Vrstni red izbiranja: Tretji igralec, drugi igralec, prvi igralec.}
+
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\textcolor{gray}{Protokol za sorazmerno delitev med tri igralce}}
+\begin{enumerate}
+\setcounter{enumi}{3}
+
+\item Sicer (če je v 2. koraku drugi igralec dva kosa označil kot ``slaba'') ponovimo drugi korak, le da je zdaj na potezi tretji igralec. Oznake drugega igralca prekrijemo, tretji igralec jih ne upošteva.
+
+\item Če v prejšnjem koraku tretji igralec ni storil nič, smo končali in si igralci izberejo kose torte.
+
+\textsl{Vrstni red izbiranja: Drugi igralec, tretji igralec, prvi igralec.}
+
+
+\item Če je tretji igralec v četrtem koraku dva kosa označil kot ``slaba'', mora prvi igralec vzeti kos, ki sta ga tako drugi kot tretji igralec določila za ``slabega''.
+
+\item Preostala kosa torte ponovno združimo. To novo torto si drugi in tretji igralec razdelita po metodi ``Reži in izberi''.
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Splošna rešitev}
+\begin{frame}
+\frametitle{Protokol za sorazmerno delitev v splošnem}
+
+\begin{enumerate}
+
+\item Prvi igralec od celote odreže kos $P_1$ \textcolor{gray}{(ki je zanj vreden natančno $1/n$)}.
+
+\item Drugi igralec lahko ne naredi ničesar \textcolor{gray}{(če je zanj kos $P_1$ vreden manj od $1/n$)}
+ali pa kos $P_1$ obreže \textcolor{gray}{(tako, da bo obrezan kos vreden natančno $1/n$)}.
+
+Kos preimenujemo v $P_2$. Tisto, kar je drugi igralec odrezal stran, shranimo na posebno mesto za ostanke.
+
+\item Za igralce od tretjega do zadnjega po vrsti naredimo naslednje: Igralec $i$ vzame kos $P_{i-1}$ od svojega predhodnika in ravna enako kot drugi igralec v prejšnjem koraku. Kos preimenujemo v $P_i$ in podamo naprej. %, morebitne ostanke pa shranjujemo na enem mestu.
+
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\textcolor{gray}{Protokol za sorazmerno delitev v splošnem}}
+\begin{enumerate}
+\setcounter{enumi}{3}
+
+\item Kos $P_n$ dobi zadnji igralec, ki je obrezal prejeti kos, ali pa prvi igralec, če ga ni nihče obrezal.
+
+\item Vse obrezane koščke združimo s preostankom začetne torte in tako dobimo novo torto, ki jo želimo sorazmerno razdeliti med $n - 1$ ljudi. 
+
+Postopek ponavljamo, dokler nam ne ostaneta samo dva igralca.
+
+\item Za zadnja igralca sledimo metodi ``Reži in izberi''.
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Delitev brez zavisti}
+\subsection{Trije igralci}
+\begin{frame}
+\frametitle{Protokol za delitev brez zavisti za tri igralce}
+
+\begin{enumerate}
+
+\item Prvi igralec razdeli torto na tri dele \textcolor{gray}{(ki so zanj enako veliki)}.
+
+\item Drugi igralec lahko ne naredi ničesar \textcolor{gray}{(če vrednoti vsaj dva od treh kosov kot enako velika in največja)}
+ali pa obreže enega od kosov. \textcolor{gray}{(Obreže največjega, in sicer tako, da bo po obrezovanju enako velik kot drugi največji.)}
+
+Če je obrezal kos, odrezani del shranimo na mesto za ostanke in imenujemo $O$.
+
+\item Igralci si izberejo kose torte, ostankov ne upoštevamo. \textcolor{gray}{(Vsak izbere največji kos ali enega od enako velikih največjih kosov.)} Zahtevamo, da drugi igralec vzame obrezani kos, če ga ni pred njim izbral tretji igralec.
+
+\textsl{Vrstni red izbiranja: Tretji igralec, drugi igralec, prvi igralec.}
+
+\end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\textcolor{gray}{Protokol za delitev brez zavisti za tri igralce}}
+\begin{enumerate}
+\setcounter{enumi}{3}
+
+\item Če drugi igralec ni obrezal kosa, smo končali, saj ni ostanka in smo že dosegli {\em delitev brez zavisti}. V nasprotnem primeru pa sta si drugi in tretji igralec razdelila en obrezan in en neobrezan kos. Tistega, ki je dobil neobrezan kos, imenujmo ``rezalec'', drugega pa ``ne-rezalec''. ``Rezalec'' sedaj razdeli $O$ na tri dele.
+
+\item Igralci si izberejo kose, na katere je bil razdeljen ostanek. \textcolor{gray}{(Vsak izbere največji kos ali enega od enako velikih največjih kosov.)}
+
+\textsl{Vrstni red izbiranja: Ne-rezalec, prvi igralec, rezalec.}
+
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Splošna rešitev - skica}
+\begin{frame}
+
+Kako pridemo do protokola za splošen $n$?
+
+\begin{itemize}
+
+\item \textbf{Obrezovanje} 
+
+S tem dosežemo, da je več največjih kosov.
+
+\item \textbf{Delne razdelitve} 
+
+Če so vmesne razdelitve {\em brez zavisti}, je taka tudi končna razdelitev.
+
+\item \textbf{Ostanki in vprašanje končnosti} 
+
+Obstaja zgornja meja za število korakov (pojem ``nepreklicne prednosti'').
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Za konec}
+
+\begin{frame}
+
+\frametitle{Zanimivosti in odprta vprašanja}
+
+Omenimo še možno izbojšavo prejšnjega protokola in drugačen primer uporabe prej omenjenih protokolov.
+
+\begin{itemize}
+
+\item Zmanjševanje števila rezov (?)
+
+\item Obstoj {\em delitve super brez zavisti}
+
+\item Razdeljevanje opravil
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}
