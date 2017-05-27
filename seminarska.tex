@@ -37,7 +37,7 @@
 \author{Tjaša Bajc \\
 Fakulteta za matematiko in fiziko \\
 Oddelek za matematiko}
-\date{13.\ maj 2017}
+\date{19.\ maj 2017}
 
 \begin{document}
 
@@ -67,7 +67,7 @@ Naj bo $C$ množica, $\mu_1, \mu_2, \ldots, \mu_n$ po vrsti mere igralcev $1, 2,
 \begin{itemize}[noitemsep]
 \item {\em sorazmerna\/}, če za vsak $i$ velja $\mu_i(P_i) \geq 1/n$;
 \item {\em brez zavisti\/}, če za vsaka $i, j$ velja $\mu_i(P_i) \geq \mu_i(P_j)$;
-\item{\em super brez zavisti\/}, če za vsaka $i, j$ velja $\mu_i(P_i) > 1/n$ in hkrati $\mu_i(P_j) < 1/n$ .								
+\item{\em super brez zavisti\/}, če za vsaka $i, j, i \neq j,$ velja $\mu_i(P_i) > 1/n$ in hkrati $\mu_i(P_j) < 1/n$ .								
 \end{itemize}
 
 \end{definicija}
@@ -78,7 +78,7 @@ Naj bo $C$ množica, $\mu_1, \mu_2, \ldots, \mu_n$ po vrsti mere igralcev $1, 2,
 
 Za problem s samo dvema igralcema je zelo znana t.i. metoda ``Reži in izberi'', na katero se bomo pogosto sklicevali. Zaporedje korakov (kar bomo kasneje imenovali protokol) je v tem primeru zelo preprosto. Prvi igralec razdeli torto na dva dela (ki sta zanj enaka), drugi si nato izbere svoj kos, prvemu pa pripade preostanek. Ta delitev je {\em sorazmerna\/} in hkrati {\em brez zavisti\/}. Prvi igralec je dobil natančno $1/2$, drugi pa kvečjemu več. Če namreč njuni meri sovpadata, $\mu_1 = \mu_2$, je prav tako dobil natančno $1/2$, v nasprotnem primeru pa si lahko izbere večjega od obeh kosov.
 
-Omenjeni primer $n = 2$ je edini, kjer pojma {\em proporcionalne delitve\/} in {\em delitve brez zavisti\/} sovpadata. Očitno je, da je {\em delitev brez zavisti\/} vedno {\em sorazmerna\/}, obratna implikacija pa ne drži.
+Omenjeni primer $n = 2$ je edini, kjer pojma {\em sorazmerne delitve\/} in {\em delitve brez zavisti\/} sovpadata. Očitno je, da je {\em delitev brez zavisti\/} vedno {\em sorazmerna\/}, obratna implikacija pa ne drži.
 
 %\subsection{*** Algoritmi in rešitve s premikajočim se nožem}
 %
@@ -90,13 +90,14 @@ Omenjeni primer $n = 2$ je edini, kjer pojma {\em proporcionalne delitve\/} in {
 
 \subsection{Protokoli}
 
-Za nas bo najpomembnejši sistem pravil, ki ga bomo imenovali ``protokol'' (Sklic Sklic Sklic Sklic Sklic Sklic Sklic). Protokol je zaporedje navodil, ki ob upoštevanju vnaprej določenih pravil pripelje do razdelitve celote $C$ med $n$ igralcev. Od igralcev protokol zahteva dejanja, ki vplivajo na nadaljne korake, npr. ``Izberi $k$ kosov od preostalih $m$,'' ali ``Obreži enega od kosov,'' in podobno. Protokol od igralcev ne zahteva, da razkrijejo svoj načinu vrednotenja (mero). Pomembna značilnost protokola je, da nas do pravične razdelitve nujno pripelje v končno mnogo korakih, z drugimi besedami, da se ob upoštevanju pravil ne more zgoditi, da se postopek ne bi končal.
+Za nas bo najpomembnejši sistem pravil, ki ga bomo imenovali ``protokol''  % SKLIC SKLIC SKLIC SKLIC
+. Protokol je zaporedje navodil, ki ob upoštevanju vnaprej določenih pravil pripelje do razdelitve celote $C$ med $n$ igralcev. Od igralcev protokol zahteva dejanja, ki vplivajo na nadaljne korake, npr. ``Izberi $k$ kosov od preostalih $m$'' ali ``Obreži enega od kosov'' in podobno. Protokol od igralcev ne zahteva, da razkrijejo svoj način vrednotenja (mero). Pomembna značilnost protokola je, da nas do pravične razdelitve nujno pripelje v končno mnogo korakih, z drugimi besedami, da se ob upoštevanju pravil ne more zgoditi, da se postopek ne bi končal.
 
-Zaporedje takih dejanj, ki so skladna s pravili protokola, in ki naj jih igralec povrsti izvede, ko je na potezi, bomo imenovali ``strategija''. Protokol je {\em sorazmeren}, če ima vsak od $n$ igralcev strategijo, ki mu bo zagotovila končni delež vsaj $1/n$ celote (v njegovem načinu vrednotenja), pri čemer mora biti ta rezultat neodvisen od strategij ostalih igralcev. Če ima vsak od igralcev strategijo, ki mu bo zagotovila ali kos, ki je zanj vreden največ, ali pa kos, ki je eden od nekaj enako velikih (največjih) kosov, je tak protokol {\em brez zavisti}. V tem primeru noben igralec svojega kosa ne bi menjal z drugim, kar je ekvivalentno temu, da nihče ni drugemu zavisten.
+Zaporedje takih dejanj, ki so skladna s pravili protokola in ki naj jih igralec povrsti izvede, ko je na potezi, bomo imenovali ``strategija''. Protokol je {\em sorazmeren}, če ima vsak od $n$ igralcev strategijo, ki mu bo zagotovila končni delež vsaj $1/n$ celote (v njegovem načinu vrednotenja), pri čemer mora biti ta rezultat neodvisen od strategij ostalih igralcev. Če ima vsak od igralcev strategijo, ki mu bo zagotovila ali kos, ki je zanj vreden največ, ali pa kos, ki je eden od nekaj enako velikih (največjih) kosov, je tak protokol {\em brez zavisti}. V tem primeru noben igralec svojega kosa ne bi menjal z drugim, kar je ekvivalentno temu, da nihče ni drugemu zavisten.
 
-Dokaz, da obstaja npr. {\em sorazmeren protokol}, je sestavljen iz pravil, strategij za posamezne igralce in utemeljitve, zakaj predstaveljene strategije pripeljejo igralce do zahtevanih deležev (v tem primeru vsaj $1/n$). Pravila od strategij loči to, da njihovo izvajanje lahko nadzoruje neka tretja oseba, ki jo imenujmo sodnik. Dva odstavka nazaj smo zapisali, da igralcem nikoli ni potrebno razkriti, kako vrednotijo posamezne kose, torej sodnik o tem ne ve ničesar. Zato je recimo trditev ``Prvi igralec razdeli torto na 3 enake dele,'' strategija, ne pa pravilo. Pravilo bi se glasilo ``Prvi igralec razdeli torto na 3 dele.'' Sodnik ne more preveriti prve trditve, ker ne ve, kako igralec vrednoti kose. Druga trditev je preverljiva brez informacije o načinu vrednotenja, zato je pravilo.
+Dokaz, da obstaja npr. {\em sorazmeren protokol}, je sestavljen iz pravil, strategij za posamezne igralce in utemeljitve, zakaj predstavljene strategije pripeljejo igralce do zahtevanih deležev (v tem primeru vsaj $1/n$). Pravila od strategij loči to, da njihovo izvajanje lahko nadzoruje neka tretja oseba, ki jo imenujmo sodnik. Dva odstavka nazaj smo zapisali, da igralcem nikoli ni potrebno razkriti, kako vrednotijo posamezne kose, torej sodnik o tem ne ve ničesar. Zato je recimo trditev ``Prvi igralec razdeli torto na 3 enake dele,'' strategija, ne pa pravilo. Pravilo bi se glasilo ``Prvi igralec razdeli torto na 3 dele.'' Sodnik ne more preveriti prve trditve, ker ne ve, kako igralec vrednoti kose. Druga trditev je preverljiva brez informacije o načinu vrednotenja, zato je pravilo.
 
-Pri načinu zapisovanja protokolov bomo zaradi preglednosti prevzeli način, uporabljen v članku (Sklic Sklic Sklic Sklic Sklic Sklic). To pomeni, da bomo protokole predstavili kot zaporedje oštevilčenih korakov. Dokaz, da protokol res pripelje do pravične razdelitve, bomo zapisovali ``sproti'', torej med posamezniki koraki. Strategije bomo ločili od pravil tako, da jih bomo zapisali v oklepajih in v sivi barvi. S tem želimo doseči jasen zapis in omogočiti branje navodil ločeno od strategij.
+Pri načinu zapisovanja protokolov bomo zaradi preglednosti prevzeli način, uporabljen v članku (Sklic Sklic Sklic Sklic Sklic Sklic). To pomeni, da bomo protokole predstavili kot zaporedje oštevilčenih korakov. Dokaz, da protokol res pripelje do pravične razdelitve, bomo zapisovali ``sproti'', torej med posameznimi koraki. Strategije bomo ločili od pravil tako, da jih bomo zapisali v oklepajih in v sivi barvi. S tem želimo doseči jasen zapis in omogočiti branje navodil ločeno od strategij.
 
 V nadaljevanju so podrobno predstavljeni štirje protokoli, dva za {\em sorazmerno delitev} (za primer treh igralcev in v splošnem) in dva za {\em delitev brez zavisti} (ponovno najprej za primer treh igralcev in nato splošna rešitev).
 
@@ -111,7 +112,7 @@ Naslednji protokol vodi do take razdelitve torte med tri ljudi, da vsak izmed nj
 
 \item Prvi igralec razdeli torto na tri dele \textcolor{gray}{(ki so zanj enako veliki)}.
 
-\item Drugi igralec lahko ne naredi ničesar \textcolor{gray}{(če vsaj dva od treh kosov vrednoti kot večja od $1/3$ celote)}
+\item Drugi igralec lahko ne naredi ničesar \textcolor{gray}{(če vsaj dva od treh kosov vrednoti kot večja ali enaka $1/3$ celote)}
 
 ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak posebej zanj vredna strogo manj kot $1/3$ celote.)}
 
@@ -119,15 +120,15 @@ ali pa dva kosa označi kot ``slaba''. \textcolor{gray}{(To stori, če sta vsak 
 
 \textsl{Vrstni red izbiranja: Tretji igralec, drugi igralec, prvi igralec.}
 
-\item [\textbf { \em Komentar}] V tem primeru je vsakdo dobil kos v velikosti vsaj  $1/3$ celote (v njegovem načinu vrednotenja). Tretji igralec izbira prvi, zato bo gotovo lahko izbral tak kos. Drugi igralec je vsaj dva kosa vrednotil kot večja od  $1/3$, torej je vsaj eden od teh kosov še na voljo po tem, ko tretji vzame svoj kos. Prvi igralec je torto razdelil na enake dele, torej bo v vsakem primeru zadovoljen s kosom, ki mu še ostane.
+\item [\textbf { \em Komentar}] V tem primeru je vsakdo dobil kos v velikosti vsaj  $1/3$ celote (v svojem načinu vrednotenja). Tretji igralec izbira prvi, zato bo gotovo lahko izbral tak kos. Drugi igralec je vsaj dva kosa vrednotil kot večja od  $1/3$, torej je vsaj eden od teh kosov še na voljo po tem, ko tretji vzame svoj kos. Prvi igralec je torto razdelil na enake dele, torej bo v vsakem primeru zadovoljen s kosom, ki mu še ostane.
 
-\item Sicer (če je v 2. koraku drugi igralec dva kosa označil kot ``slaba'') ponovimo drugi korak, le da je zdaj na potezi tretji igralec. Oznake drugega igralca prekrijemo, tretji igralec jih ne upošteva.
+\item Sicer (če je v 2.~koraku drugi igralec dva kosa označil kot ``slaba'') ponovimo drugi korak, le da je zdaj na potezi tretji igralec. Oznake drugega igralca prekrijemo, tretji igralec jih ne upošteva.
 
 \item Če v prejšnjem koraku tretji igralec ni storil nič, smo končali in si igralci izberejo kose torte.
 
 \textsl{Vrstni red izbiranja: Drugi igralec, tretji igralec, prvi igralec.}
 
-\item [\textbf{\em Komentar}] Razmislek je podoben prejšnjemu. Drugi igralec lahko izbere kos, ki ga ni označil kot ``slabega'', saj izbira prvi. Tako nujno dobi vsaj $1/3$ celote. Tretjemu igralcu sta se zdela vsaj dva kosa enako velika (in oba večja od $1/3$) in vsaj en tak kos mu je še vedno na voljo. Prvi igralec je zadovoljen s preostalim kosom, saj je zanj vreden natačno $1/3$.
+\item [\textbf{\em Komentar}] Razmislek je podoben prejšnjemu. Drugi igralec lahko izbere kos, ki ga ni označil kot ``slabega'', saj izbira prvi. Tako nujno dobi vsaj $1/3$ celote. Tretjemu igralcu sta se zdela vsaj dva kosa enako velika (in oba večja od $1/3$) in vsaj en tak kos mu je še vedno na voljo. Prvi igralec je zadovoljen s preostalim kosom, saj je zanj vreden natančno $1/3$.
 
 \item Če je tretji igralec v četrtem koraku dva kosa označil kot ``slaba'', mora prvi igralec vzeti kos, ki sta ga tako drugi kot tretji igralec določila za ``slabega''.
 
@@ -159,15 +160,15 @@ Kos preimenujemo v $P_2$ (neodvisno od tega, ali je bil obrezan). Tisto, kar je 
 
 \item Za igralce od tretjega do zadnjega po vrsti naredimo naslednje: Igralec $i$ vzame kos $P_{i-1}$ od svojega predhodnika in ravna enako kot drugi igralec v prejšnjem koraku (torej kos obreže ali pa ne). Kos preimenujemo v $P_i$ in podamo naprej, morebitne ostanke pa shranjujemo na enem mestu.
 
-\item [\textbf{\em Komentar}] Preden igralec kos poda naprej (torej po morebitnem obrezovanju), meni, da je kos velik $1/n$ ali manj. Prav tako velja, da se kos z vsakim novim igralec kvečjemu zmanjša, zato vsi mislijo, da je na koncu kos $P_n$ vreden največ $1/n$.
+\item [\textbf{\em Komentar}] Preden igralec kos poda naprej (torej po morebitnem obrezovanju), meni, da je kos velik $1/n$ ali manj. Prav tako velja, da se kos z vsakim novim igralcem kvečjemu zmanjša, zato vsi mislijo, da je na koncu kos $P_n$ vreden največ $1/n$.
 
 \item Kos $P_n$ dobi zadnji igralec, ki je obrezal prejeti kos, ali pa prvi igralec, če ga ni nihče obrezal.
 
-\item [\textbf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga sam naredil tako velikega. % Je to razumljivo?
+\item [\textbf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga je sam naredil tako velikega. % Je to razumljivo?
 
 \item Vse obrezane koščke združimo s preostankom začetne torte (iz prvega koraka) in tako dobimo novo torto, ki jo želimo sorazmerno razdeliti med $n - 1$ ljudi. Ponavljamo enak postopek, dokler nam ne ostaneta samo dva igralca.
 
-\item [\textbf{\em Komentar}] Kdor dobi kos v drugem krogu razdeljevanja, dobi natančno $1/(n - 1)$ nove torte. On in vse drugi se strinjajo, da je ta nova torta velika vsaj $(n - 1)/n$, torej je ta igralec dobil vsaj $1/n$ začetne torte.
+\item [\textbf{\em Komentar}] Kdor dobi kos v drugem krogu razdeljevanja, dobi natančno $1/(n - 1)$ nove torte. On in vsi drugi se strinjajo, da je ta nova torta velika vsaj $(n - 1)/n$, torej je ta igralec dobil vsaj $1/n$ začetne torte.
 
 \item Za zadnja igralca sledimo metodi ``Reži in izberi''.
 
@@ -177,7 +178,7 @@ Kos preimenujemo v $P_2$ (neodvisno od tega, ali je bil obrezan). Tisto, kar je 
 
 \section{Delitev brez zavisti med tri igralce}
 
-Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo. V spodnjem protokolu je poleg obrezovanja pomemben tudi pojem ``nepreklicne prednosti'' enega igralca pred drugim in zamisel o postopni delitvi. Našteti trije elementi protokola so med seboj tesno povezani. Preprosto rečeno, z obrezovanjem pridemo do tega, da del torte razdelimo {\em brez zavisti}, del pa ostane nerazdeljen (ta del setavljajo koščki, ki so nastali zaradi obrezovanja večjih kosov). Da lahko razdelimo še ta preostanek, potrebujemo ``nepreklicno prednost'' enega igralca pred drugim. Podrobneje bomo to idejo razložili spodaj v kometnarjih ob konkretnem primeru.
+Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa nihče ne bi zamenjal s kosom drugega igralca. Spomnimo se, da kosov z enako mero med seboj ne ločujemo. V spodnjem protokolu je poleg obrezovanja pomemben tudi pojem ``nepreklicne prednosti'' enega igralca pred drugim in zamisel o postopni delitvi. Našteti trije elementi protokola so med seboj tesno povezani. Preprosto rečeno, z obrezovanjem pridemo do tega, da del torte razdelimo {\em brez zavisti}, del pa ostane nerazdeljen (ta del setavljajo koščki, ki so nastali zaradi obrezovanja večjih kosov). Da lahko razdelimo še ta preostanek, potrebujemo ``nepreklicno prednost'' enega igralca pred drugim. Podrobneje bomo to idejo razložili spodaj v komentarjih ob konkretnem primeru.
 
 
 \begin{protokol}
@@ -188,7 +189,7 @@ Pri {\em delitvi brez zavisti} želimo celoto razdeliti tako, da svojega kosa ni
 
 ali pa obreže enega od kosov. \textcolor{gray}{(Obreže največjega, in sicer tako, da bo po obrezovanju enako velik kot drugi največji. Tako dobimo dva enako velika največja kosa.)}
 
-Če je obrezal kos, odrezani del shranimo na mesto za ostanke in imenujemo $O$ (kot ostanek).
+Če je obrezal kos, odrezani del shranimo na mesto za ostanke in ga imenujemo $O$ (kot ostanek).
 
 \item Igralci si izberejo kose torte, ostankov ne upoštevamo. \textcolor{gray}{(Vsak izbere največji kos ali enega od enako velikih največjih kosov.)} Zahtevamo, da drugi igralec vzame obrezani kos, če ga ni pred njim izbral tretji igralec.
 
@@ -224,9 +225,13 @@ Zadnji protokol je najdaljši in najmanj intuitiven, saj je {\em delitev brez za
 
 \item Če ni ugovorov, smo končali in vsakdo obdrži dodeljeni kos.
 
-\item Sicer izberemo najmanjši tak $i$, da je $i$-ti igralec ugovarjal. Brez škode za splošnost privzemimo, da je ugovarjal prvi igralec in njegov kos imenujmo $B$. Neki drug kos imenujmo $A$. \textcolor{gray}{(Tako imenujemo kos tistega igralca, ki mu je prvi igralec zavidal.)} % Res ??? Ali je to kos 2. igralca?
+\item Sicer izberemo najmanjši tak $i$, da je $i$-ti igralec ugovarjal. Brez škode za splošnost privzemimo, da je ugovarjal prvi igralec. Njegov kos imenujmo $B$, neki drug kos imenujmo $A$. \textcolor{gray}{(Tako imenujemo kos tistega igralca, ki mu je prvi igralec zavidal.)} % Res ??? Ali je to kos 2. igralca?
 
 \item [\textbf{\em Komentar}] Jasno je, da se prvemu igralcu kos $A$ zdi večji od $B$, sicer ne bi bil zavisten. Iz prvega koraka vemo, da se drugemu igralcu zdita kosa enako velika, saj je on razrezal torto. Na tem mestu preostala kosa (torej tista izmed začetnih štirih, ki nista ne $A$ in ne $B$) združimo in damo na stran, ta del bomo razdelili kasneje.
+
+
+%%%%%		PETKOVŠEK - preberi in ukrepaj
+
 
 \item Prvi igralec določi naravno število $r$, večje ali enako 10. \textcolor{gray}{(To stori tako, da bo za vsako razdelitev kosa $A$ na $r$ podkosov še vedno menil, da je $A$ večji od $B$, tudi po tem, ko bomo iz razdelitve $A$ odstranili 7 najmanjših kosov.)} % Se razume, da so najmanjši subjektivno, glede na prvega igralca?
 
@@ -236,19 +241,27 @@ $$ \mu_1(A) - 7 \cdot \frac{\mu_1(A)}{r} > \mu_1(B) $$
 $$r \cdot \mu_1(A) - 7 \mu_1(A) > r \cdot \mu_1(B) $$
 $$r > \frac{7 \mu_1(A)}{\mu_1(A) - \mu_1(B)} $$
 
+
+%%%%%%
+
+
 \item Drugi igralec razdeli tako $A$ kot $B$ na $r$ delov \textcolor{gray}{(ki so zanj enako veliki)}.
 
 \item Prvi igralec izbere \textcolor{gray}{(najmanjše)} tri podkose kosa $B$ in jih imenuje $Z_1, Z_2, Z_3$ ter tri podkose kosa $A$, ki jih imenuje $Y_1, Y_2, Y_3$. Za podkose kosa $A$ ima dve možnosti. Ali vzame tri \textcolor{gray}{(največje)} podkose \textcolor{gray}{(če meni, da je vsak od teh treh posebej večji od največjega izmed $Z_1, Z_2, Z_3$)} in največ dva od teh treh obreže \textcolor{gray}{(na velikost najmanjšega od izbranih podkosov kosa $A$)} ali pa vzame \textcolor{gray}{(največji)} podkos in ga razdeli na tri \textcolor{gray}{(enako velike)} dele.
 
-\item [\textbf{\em Komentar}] Strategija prvemu igralcu zagotavlja, da bo v vsakem primeru dobil tri enako velike kose (podkosi $Y_1, Y_2, Y_3$), ki so večji od največjega izmed $Z_1, Z_2, Z_3$. Drugi igralec pa misli, da so $Z_1, Z_2, Z_3$ vsi enako veliki in vsak od teh posebej vsaj tako velik kot $Y_1, Y_2, Y_3$.
+\item [\textbf{\em Komentar}] Strategija prvemu igralcu zagotavlja, da bo v vsakem primeru dobil tri enako velike kose (podkosi $Y_1, Y_2, Y_3$), ki so večji od največjega izmed $Z_1, Z_2, Z_3$.
 
-\item Tretji igralec vzame teh 6 posebej označenih kosov in ne stori nič \textcolor{gray}{(če meni, da sta vsaj dva kosa enako velika in največja)} ali pa obreže enega izmed šestih kososv. \textcolor{gray}{(O breže največjega na velikost drugega največjega.)}
+%%%%%		PETKOVŠEK - preberi in ukrepaj
 
-\item  Sedaj si štirje igralci izberejo vsak po en kos izmed kosov $Y_1, Y_2, Y_3, Z_1, Z_2, Z_3$. \textcolor{gray}{(Vsak izbere največji kos ali enega od nekaj enako velikih največjih kosov)}. Dodatno zahtevamo naslednje: Tretji igralec mora izbrati kos, ki ga je obrezal v prejšnjem koraku, če mu je ta še na voljo. Drugi igralec mora vzeti enega od $Z$-jev, prvi pa enega od $Y$-ov.
+ Drugi igralec pa misli, da so $Z_1, Z_2, Z_3$ vsi enako veliki in vsak od teh posebej vsaj tako velik kot $Y_1, Y_2, Y_3$.
+
+\item Tretji igralec vzame teh 6 posebej označenih kosov in ne stori nič \textcolor{gray}{(če meni, da sta vsaj dva kosa enako velika in največja)} ali pa obreže enega izmed šestih kosov. \textcolor{gray}{(Obreže največjega na velikost drugega največjega.)}
+
+\item  Sedaj si štirje igralci izberejo vsak po enega izmed kosov $Y_1, Y_2, Y_3, Z_1, Z_2, Z_3$. \textcolor{gray}{(Vsak izbere največji kos ali enega od nekaj enako velikih največjih kosov)}. Dodatno zahtevamo naslednje: Tretji igralec mora izbrati kos, ki ga je obrezal v prejšnjem koraku, če mu je ta še na voljo. Drugi igralec mora vzeti enega od $Z$-jev, prvi pa enega od $Y$-ov.
 
 \textsl{Vrstni red izbiranja: Četrti igralec, tretji igralec, drugi igralec, prvi igralec.}
 
-\item [\textbf{\em Komentar}] Tako smo torto delno razdelili. Dobimo razdelitev ${\{X_1, X_2, X_3, X_4, O_1\}}$, kjer je ${\{X_1, X_2, X_3, X_4\}}$ {\em delitev brez zavisti}, $O_1$ pa ostanek, sestavljen iz vseh do sedaj nastalih obrezkov iz zlepka neporabljenih kosov iz drugega koraka. Velja še, da se prvemu igralcu zdi kos $X_1$ strogo večji od kosa $X_2$, ki je pripadel drugemu igralcu. Označimo (pozitivno) razliko med kosoma $X_1$ in $X_2$ z $\epsilon$.
+\item [\textbf{\em Komentar}] Tako smo torto delno razdelili. Dobimo razdelitev ${\{X_1, X_2, X_3, X_4, O_1\}}$, kjer je ${\{X_1, X_2, X_3, X_4\}}$ {\em delitev brez zavisti}, $O_1$ pa ostanek, sestavljen iz vseh do sedaj nastalih obrezkov in zlepka neporabljenih kosov iz drugega koraka. Velja še, da se prvemu igralcu zdi kos $X_1$ strogo večji od kosa $X_2$, ki je pripadel drugemu igralcu. Označimo (pozitivno) razliko med kosoma $X_1$ in $X_2$ z $\epsilon$.
 
 \item Prvi igralec imenuje pozitivno naravno število $s$. \textcolor{gray}{(Za $s$ naj velja, da je $[4\mu_1(O_1)/5]^s$ še zmeraj manjše od $\epsilon$}. 
 
@@ -268,13 +281,13 @@ $$r > \frac{7 \mu_1(A)}{\mu_1(A) - \mu_1(B)} $$
 
 \item Še $(s - 1)$-krat ponovimo korake od 11.~do 14, vsakokrat na ostanku predhodne ponovitve. Torej, vsakokrat razdelimo, kar je ostalo nerazdeljeno v 13.~koraku.
 
-\item [\textbf{\em Komentar}]  S tem smo {\em delitev brez zavisti} razdelili še en del torte, konkretno del ostanka $O_1$. Vsak igralec združi kos, ki ga je prejel v 9.~koraku, s koščki, ki jih je dobil z $s$ ponovitvami prej omenjenih korakov, in zlepek vsek svojih koščkov imenuje $X'_i$. Dobili smo torej razdelitev ${\{X'_1, X'_2, X'_3, X'_4, O_2\}}$ začetne torte, kjer je ${\{X'_1, X'_2, X'_3, X'_4\}}$ {\em delitev brez zavisti}. Dosegli smo še, da prvi igralec vrednoti svoj kos $X'_1$ kot večjega od unije kosov $X'_2$ in $O_2$. Zato lahko povemo, da ima prvi igralec ``nepreklicno prednost'' pred drugim igralcem ter par $(1,2)$ dodamo v (do sedaj prazno) množico $\P$. Množica $\P$ je podmnožica ${\{1, 2, 3, 4\}} \times {\{1, 2, 3, 4\}}$, ki vsebuje pare $(i, j)$, za katere velja, da ima $i$-ti igralec ``nepreklicno prednost'' pred $j$-tim igralcem (od tod ime množice - ``P'' kot prednost).
+\item [\textbf{\em Komentar}]  S tem smo {\em brez zavisti} razdelili še en del torte, konkretno del ostanka $O_1$. Vsak igralec združi kos, ki ga je prejel v 9.~koraku, s koščki, ki jih je dobil z $s$ ponovitvami prej omenjenih korakov, in zlepek vseh svojih koščkov imenuje $X'_i$. Dobili smo torej razdelitev ${\{X'_1, X'_2, X'_3, X'_4, O_2\}}$ začetne torte, kjer je ${\{X'_1, X'_2, X'_3, X'_4\}}$ {\em delitev brez zavisti}. Dosegli smo še, da prvi igralec vrednoti svoj kos $X'_1$ kot večjega od unije kosov $X'_2$ in $O_2$. Zato lahko povemo, da ima prvi igralec ``nepreklicno prednost'' pred drugim igralcem ter par $(1,2)$ dodamo v (do sedaj prazno) množico $\P$. Množica $\P$ je podmnožica ${\{1, 2, 3, 4\}} \times {\{1, 2, 3, 4\}}$, ki vsebuje pare $(i, j)$, za katere velja, da ima $i$-ti igralec ``nepreklicno prednost'' pred $j$-tim igralcem (od tod ime množice - ``P'' kot prednost).
 
 \item Drugi igralec razdeli $O_2$ na 12 kosov \textcolor{gray}{(ki so zanj enako veliki)}.
 
-\item Vsak od igralcev se opredeli kot bodisi igralec tipa $E$ \textcolor{gray}{(če se mu zdijo vsi kosi enako veliki)} bodisi igralec tipa $R$ \textcolor{gray}{(če se mu zdita vsaj dva kosa različno velika)}. Drugi igralec je avtomatično razglašen za igralca tipa $E$.
+\item Vsak od igralcev se opredeli kot bodisi igralec tipa $E$ \textcolor{gray}{(če se mu zdijo vsi kosi enako veliki)} bodisi igralec tipa $R$ \textcolor{gray}{(če se mu zdita vsaj dva kosa različno velika)}. Drugi igralec je seveda tipa $E$.
 
-\item Če velja, da je  $R \times E \subset \P$, damo vseh 12 kosov igralcem iz $A$ tako, da vsak dobi enako število kosov (vemo, da se jim zdijo kosi enako veliki). S tem smo končali delitev celotne torte.
+\item Če velja, da je  $R \times E \subset \P$, damo vseh 12 kosov igralcem iz $E$ tako, da vsak dobi enako število kosov (vemo, da se jim zdijo kosi enako veliki). S tem smo končali delitev celotne torte.
 
 \item V nasprotnem primeru pa izberemo leksikografsko najmanjši par $(i, j)$ iz $R \times E$, ki ni v $\P$. Sedaj se vrnemo v 4.~korak, kjer vlogo prvega igralca dobi $i$-ti igralec, vlogo drugega pa $j$-ti. Namesto celotne torte sedaj razdeljujemo $O_2$ (ponovno združimo 12 kosov iz 16.~koraka).
 
@@ -286,21 +299,18 @@ $$r > \frac{7 \mu_1(A)}{\mu_1(A) - \mu_1(B)} $$
  
  \section{Zaključek}
  
- V seminarju smo predstavili nekaj osnovnih definicij pravične delitve in pojem protokola. Navedli smo dva protokola, ki vodita do sorazmerne delitve dane celote med igralce, kjer vsak od igralcev dobi najmanj $1/n$ glede na njemu lasten način vrednotenja. V tem primeru ne moremo izključiti možnosti, da bi se nekemu igralcu ob končni razdelitvi zdelo, da je nekdo drug dobil {\em več} od njega in bi mu bil zato zavisten. Druga dva protokola poskrbita tudi za to, saj nas pripeljeta do take razdelitve, da nihče izmed igralcev svojega kosa ne bi želel zamenjati s kosom drugega igralca.
+ V seminarju smo predstavili nekaj osnovnih definicij pravične delitve in pojem protokola. Navedli smo dva protokola, ki vodita do sorazmerne delitve dane celote med igralce, kjer vsak od igralcev dobi najmanj $1/n$ glede na njemu lastni način vrednotenja. V tem primeru ne moremo izključiti možnosti, da bi se nekemu igralcu ob končni razdelitvi zdelo, da je nekdo drug dobil {\em več} od njega in bi mu bil zato zavisten. Druga dva protokola poskrbita tudi za to, saj nas pripeljeta do take razdelitve, da nihče izmed igralcev svojega kosa ne bi želel zamenjati s kosom drugega igralca.
  
  Kot zanimivost povejmo še, da je mogoče vse štiri protokole uporabiti tudi za reševanje ``problema z opravili'', kjer želimo med igralce razdeliti neke naloge (delo). Tedaj si igralci prizadevajo za {\em čim manjši} delež celote, čemur smiselno prilagodimo prej naštete protokole.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\begin{thebibliography}{1}
-%\bibitem{AiZ}
-%M.~Aigner in G.~M.~Ziegler, \emph{Proofs from THE BOOK}, 2.\ izdaja, Springer, Berlin--Heidelberg--New York, 2001.
-%\bibitem{CaW}
-%N.~Calkin in H.~S.~Wilf, Recounting the rationals,
-%\emph{Amer.~Math.~Monthly}  \textbf{107}  (2000),  360--363.
-%\bibitem{Gra}
-%J.~Grasselli, \emph{Elementarna teorija števil}, DMFA -- založništvo, Ljubljana, 2009.
-%\end{thebibliography}
+\begin{thebibliography}{5}
+\bibitem{bramstaylor}
+S.~J.~Brams, A.~D.~Taylor: An envy-free cake division protocol, \emph{Amer. Math. Monthly} \textbf{102} (1995) 9 -- 18.
+\bibitem{barbanel}
+J.~B.~Barbanel: Super envy-free cake division and independence of measures, \emph{J. Math. Anal. Appl.} \textbf{197} (1996) 54 -- 50.
+\end{thebibliography}
 
 
 
