@@ -80,24 +80,15 @@ Za problem s samo dvema igralcema je zelo znana t.i. metoda ``Reži in izberi'',
 
 Omenjeni primer $n = 2$ je edini, kjer pojma {\em sorazmerne delitve\/} in {\em delitve brez zavisti\/} sovpadata. Očitno je, da je {\em delitev brez zavisti\/} vedno {\em sorazmerna\/}, obratna implikacija pa ne drži.
 
-%\subsection{*** Algoritmi in rešitve s premikajočim se nožem}
-%
-%\texttt{Besedilo moram še napisati}
-%
-%\subsection{*** Izreki o obstoju ?? ?? ?? ?? ??}
-%
-%\texttt{Besedilo moram še napisati}
-
 \subsection{Protokoli}
 
-Za nas bo najpomembnejši sistem pravil, ki ga bomo imenovali ``protokol''  % SKLIC SKLIC SKLIC SKLIC
-. Protokol je zaporedje navodil, ki ob upoštevanju vnaprej določenih pravil pripelje do razdelitve celote $C$ med $n$ igralcev. Od igralcev protokol zahteva dejanja, ki vplivajo na nadaljne korake, npr. ``Izberi $k$ kosov od preostalih $m$'' ali ``Obreži enega od kosov'' in podobno. Protokol od igralcev ne zahteva, da razkrijejo svoj način vrednotenja (mero). Pomembna značilnost protokola je, da nas do pravične razdelitve nujno pripelje v končno mnogo korakih, z drugimi besedami, da se ob upoštevanju pravil ne more zgoditi, da se postopek ne bi končal.
+Za nas bo najpomembnejši sistem pravil, ki ga bomo imenovali ``protokol''. Protokol je zaporedje navodil, ki ob upoštevanju vnaprej določenih pravil pripelje do razdelitve celote $C$ med $n$ igralcev. Od igralcev protokol zahteva dejanja, ki vplivajo na nadaljne korake, npr. ``Izberi $k$ kosov od preostalih $m$'' ali ``Obreži enega od kosov'' in podobno. Protokol od igralcev ne zahteva, da razkrijejo svoj način vrednotenja (mero). Pomembna značilnost protokola je, da nas do pravične razdelitve nujno pripelje v končno mnogo korakih, z drugimi besedami, da se ob upoštevanju pravil ne more zgoditi, da se postopek ne bi končal.
 
 Zaporedje takih dejanj, ki so skladna s pravili protokola in ki naj jih igralec povrsti izvede, ko je na potezi, bomo imenovali ``strategija''. Protokol je {\em sorazmeren}, če ima vsak od $n$ igralcev strategijo, ki mu bo zagotovila končni delež vsaj $1/n$ celote (v njegovem načinu vrednotenja), pri čemer mora biti ta rezultat neodvisen od strategij ostalih igralcev. Če ima vsak od igralcev strategijo, ki mu bo zagotovila ali kos, ki je zanj vreden največ, ali pa kos, ki je eden od nekaj enako velikih (največjih) kosov, je tak protokol {\em brez zavisti}. V tem primeru noben igralec svojega kosa ne bi menjal z drugim, kar je ekvivalentno temu, da nihče ni drugemu zavisten.
 
 Dokaz, da obstaja npr. {\em sorazmeren protokol}, je sestavljen iz pravil, strategij za posamezne igralce in utemeljitve, zakaj predstavljene strategije pripeljejo igralce do zahtevanih deležev (v tem primeru vsaj $1/n$). Pravila od strategij loči to, da njihovo izvajanje lahko nadzoruje neka tretja oseba, ki jo imenujmo sodnik. Dva odstavka nazaj smo zapisali, da igralcem nikoli ni potrebno razkriti, kako vrednotijo posamezne kose, torej sodnik o tem ne ve ničesar. Zato je recimo trditev ``Prvi igralec razdeli torto na 3 enake dele,'' strategija, ne pa pravilo. Pravilo bi se glasilo ``Prvi igralec razdeli torto na 3 dele.'' Sodnik ne more preveriti prve trditve, ker ne ve, kako igralec vrednoti kose. Druga trditev je preverljiva brez informacije o načinu vrednotenja, zato je pravilo.
 
-Pri načinu zapisovanja protokolov bomo zaradi preglednosti prevzeli način, uporabljen v članku (Sklic Sklic Sklic Sklic Sklic Sklic). To pomeni, da bomo protokole predstavili kot zaporedje oštevilčenih korakov. Dokaz, da protokol res pripelje do pravične razdelitve, bomo zapisovali ``sproti'', torej med posameznimi koraki. Strategije bomo ločili od pravil tako, da jih bomo zapisali v oklepajih in v sivi barvi. S tem želimo doseči jasen zapis in omogočiti branje navodil ločeno od strategij.
+Pri načinu zapisovanja protokolov bomo zaradi preglednosti prevzeli način, uporabljen v članku Bramsa in Taylorja \cite{bramstaylor}. To pomeni, da bomo protokole predstavili kot zaporedje oštevilčenih korakov. Dokaz, da protokol res pripelje do pravične razdelitve, bomo zapisovali ``sproti'', torej med posameznimi koraki. Strategije bomo ločili od pravil tako, da jih bomo zapisali v oklepajih in v sivi barvi. S tem želimo doseči jasen zapis in omogočiti branje navodil ločeno od strategij.
 
 V nadaljevanju so podrobno predstavljeni štirje protokoli, dva za {\em sorazmerno delitev} (za primer treh igralcev in v splošnem) in dva za {\em delitev brez zavisti} (ponovno najprej za primer treh igralcev in nato splošna rešitev).
 
@@ -164,7 +155,7 @@ Kos preimenujemo v $P_2$ (neodvisno od tega, ali je bil obrezan). Tisto, kar je 
 
 \item Kos $P_n$ dobi zadnji igralec, ki je obrezal prejeti kos, ali pa prvi igralec, če ga ni nihče obrezal.
 
-\item [\textbf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga je sam naredil tako velikega. % Je to razumljivo?
+\item [\textbf{\em Komentar}] Že v prejšnjem komentarju smo pokazali, da bo igralec, ki mu je bil dodeljen kos $P_n$, v vsakem primeru mislil, da je dobil natančno $1/n$ celote, saj ga je sam naredil tako velikega.
 
 \item Vse obrezane koščke združimo s preostankom začetne torte (iz prvega koraka) in tako dobimo novo torto, ki jo želimo sorazmerno razdeliti med $n - 1$ ljudi. Ponavljamo enak postopek, dokler nam ne ostaneta samo dva igralca.
 
@@ -213,9 +204,7 @@ ali pa obreže enega od kosov. \textcolor{gray}{(Obreže največjega, in sicer t
 
 Zadnji protokol je najdaljši in najmanj intuitiven, saj je {\em delitev brez zavisti} težje doseči kot {\em sorazmerno}. Kot v prejšnjem protokolu bomo z obrezovanjem prišli do delne razdelitve.
 Čeprav je protokol uporaben za splošen $n$, bomo zaradi jasnosti opisali primer za $n = 4$. 
-%V komentarjih bomo povedali, kako postopati v primeru večjega $n$. Za razliko od prej naštetih protokolov tokrat začne drugi igralec, ker bo tako protokol bolj pregleden.
 
-%%    ŠE MANJKA RAZLAGA !!!
 
 \begin{protokol}
 
@@ -229,27 +218,13 @@ Zadnji protokol je najdaljši in najmanj intuitiven, saj je {\em delitev brez za
 
 \item [\textbf{\em Komentar}] Jasno je, da se prvemu igralcu kos $A$ zdi večji od $B$, sicer ne bi bil zavisten. Iz prvega koraka vemo, da se drugemu igralcu zdita kosa enako velika, saj je on razrezal torto. Na tem mestu preostala kosa (torej tista izmed začetnih štirih, ki nista ne $A$ in ne $B$) združimo in damo na stran, ta del bomo razdelili kasneje.
 
-
-%%%%%		PETKOVŠEK - preberi in ukrepaj
-
-
-\item Prvi igralec določi naravno število $r$, večje ali enako 10. \textcolor{gray}{(To stori tako, da bo za vsako razdelitev kosa $A$ na $r$ podkosov še vedno menil, da je $A$ večji od $B$, tudi po tem, ko bomo iz razdelitve $A$ odstranili 7 najmanjših kosov.)} % Se razume, da so najmanjši subjektivno, glede na prvega igralca?
-
-\item [\textbf{\em Komentar}] Tak $r$ je lahko izbrati. Skupna vrednost vseh 7 najmanjših podkosov kosa $A$ gotovo ni večja od sedemkratnika povprečne vrednosti vseh $r$ podkosov. Pri delitvi na $r$ delov je povprečna vrednost enega kosa $\mu_1(A)/r$. Ker želimo, da bi bil $A$ brez sedmih najmanjših kosov še zmeraj vreden več od (celotnega) $B$, mora prvi igralec izbrati $r$, da bo veljalo:
-
-$$ \mu_1(A) - 7 \cdot \frac{\mu_1(A)}{r} > \mu_1(B) $$
-$$r \cdot \mu_1(A) - 7 \mu_1(A) > r \cdot \mu_1(B) $$
-$$r > \frac{7 \mu_1(A)}{\mu_1(A) - \mu_1(B)} $$
-
-
-%%%%%%
-
-
 \item Drugi igralec razdeli tako $A$ kot $B$ na $r$ delov \textcolor{gray}{(ki so zanj enako veliki)}.
 
 \item Prvi igralec izbere \textcolor{gray}{(najmanjše)} tri podkose kosa $B$ in jih imenuje $Z_1, Z_2, Z_3$ ter tri podkose kosa $A$, ki jih imenuje $Y_1, Y_2, Y_3$. Za podkose kosa $A$ ima dve možnosti. Ali vzame tri \textcolor{gray}{(največje)} podkose \textcolor{gray}{(če meni, da je vsak od teh treh posebej večji od največjega izmed $Z_1, Z_2, Z_3$)} in največ dva od teh treh obreže \textcolor{gray}{(na velikost najmanjšega od izbranih podkosov kosa $A$)} ali pa vzame \textcolor{gray}{(največji)} podkos in ga razdeli na tri \textcolor{gray}{(enako velike)} dele.
 
-\item [\textbf{\em Komentar}] Strategija prvemu igralcu zagotavlja, da bo v vsakem primeru dobil tri enako velike kose (podkosi $Y_1, Y_2, Y_3$), ki so večji od največjega izmed $Z_1, Z_2, Z_3$.
+\item [\textbf{\em Komentar}] Strategija prvemu igralcu zagotavlja, da bo v vsakem primeru dobil tri enako velike kose (podkosi $Y_1, Y_2, Y_3$), ki so večji od največjega izmed $Z_1, Z_2, Z_3$. V prvem primeru je to očitno, v drugem pa razmislimo takole: Naj bodo $A_1, A_2, \ldots, A_r$ ter $B_1, B_2, \ldots, B_r$ kosi, na katere je drugi igralec v šestem koraku razdelil kosa $A$ in $B$. Za $i = 1, 2, \ldots, r$ označimo $a_i = \mu_1 (A_i)$ in  $b_i = \mu_1 (B_i)$ in še $a = \mu_1(A)$ ter $b = \mu_1(B)$. Brez škode za splošnost lahko vzamemo, da je $a_1 \geq a_2 \geq \ldots \geq a_r$ in $b_1 \geq b_2 \geq \ldots \geq b_r$. Potem je $\{ \mu_1(Z_1), \mu_1(Z_2), \mu_1(Z_3)\} = \{b_{r-2},b_{r-1},b_r\}$ in $\mu_1(Y_1) = \mu_1(Y_2) = \mu_1(Y_3) = \frac{a_1}{3}$. Nadalje velja $$b = \sum_{i=1}^r b_i \geq  \sum_{i=1}^{r-2} b_i \geq (r-2) b_{r-2},$$ torej $b_{r-2} \leq b/(r-2)$.
+
+V drugem primeru pa velja $a_3 \leq b_{r-2}$. Recimo, da je $a_1/3 \leq b_{r-2}$. Potem je $$b = \sum_{i=1}^r b_i \geq  \sum_{i=1}^{r-2} b_i \geq (r-2) b_{r-2},$$
 
 %%%%%		PETKOVŠEK - preberi in ukrepaj
 
@@ -306,10 +281,10 @@ $$r > \frac{7 \mu_1(A)}{\mu_1(A) - \mu_1(B)} $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{thebibliography}{5}
-\bibitem{bramstaylor}
-S.~J.~Brams, A.~D.~Taylor: An envy-free cake division protocol, \emph{Amer. Math. Monthly} \textbf{102} (1995) 9 -- 18.
 \bibitem{barbanel}
 J.~B.~Barbanel: Super envy-free cake division and independence of measures, \emph{J. Math. Anal. Appl.} \textbf{197} (1996) 54 -- 50.
+\bibitem{bramstaylor}
+S.~J.~Brams, A.~D.~Taylor: An envy-free cake division protocol, \emph{Amer. Math. Monthly} \textbf{102} (1995) 9 -- 18.
 \end{thebibliography}
 
 
