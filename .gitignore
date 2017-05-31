@@ -56,3 +56,5 @@ predstavitev.log
 *.log
 predstavitev.pdf
 *.pdf
+*.snm
+predstavitev.synctex.gz(busy)
